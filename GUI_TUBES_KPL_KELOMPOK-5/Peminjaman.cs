@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI_TUBES_KPL_KELOMPOK_5
 {
-    public partial class Form2 : Form
+    public partial class Peminjaman : Form
     {
-        public Form2()
+        public Peminjaman()
         {
             InitializeComponent();
         }
