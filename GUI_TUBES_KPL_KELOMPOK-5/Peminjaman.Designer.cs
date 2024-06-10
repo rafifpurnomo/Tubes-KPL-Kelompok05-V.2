@@ -44,11 +44,10 @@
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { KodeBuku, Judul, Penulis, TahunTerbit, Stok });
-            dataGridView1.Location = new Point(110, 171);
-            dataGridView1.Margin = new Padding(5, 5, 5, 5);
+            dataGridView1.Location = new Point(68, 107);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1100, 301);
+            dataGridView1.Size = new Size(677, 188);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -89,21 +88,19 @@
             // 
             // Pinjam
             // 
-            Pinjam.Location = new Point(814, 600);
-            Pinjam.Margin = new Padding(5, 5, 5, 5);
+            Pinjam.Location = new Point(521, 373);
             Pinjam.Name = "Pinjam";
-            Pinjam.Size = new Size(153, 46);
+            Pinjam.Size = new Size(94, 29);
             Pinjam.TabIndex = 1;
             Pinjam.Text = "Pinjam";
             Pinjam.UseVisualStyleBackColor = true;
-
+            Pinjam.Click += Pinjam_Click;
             // 
             // Keluar
             // 
-            Keluar.Location = new Point(1086, 597);
-            Keluar.Margin = new Padding(5, 5, 5, 5);
+            Keluar.Location = new Point(668, 373);
             Keluar.Name = "Keluar";
-            Keluar.Size = new Size(153, 46);
+            Keluar.Size = new Size(94, 29);
             Keluar.TabIndex = 2;
             Keluar.Text = "Keluar";
             Keluar.UseVisualStyleBackColor = true;
@@ -113,7 +110,8 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ActiveCaption;
-            label1.Location = new Point(32, 21);
+            label1.Location = new Point(20, 13);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(179, 46);
             label1.TabIndex = 3;
@@ -121,18 +119,13 @@
             // 
             // Peminjaman
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-
             ClientSize = new Size(800, 450);
             Controls.Add(label1);
-
-            ClientSize = new Size(1300, 720);
-
             Controls.Add(Keluar);
             Controls.Add(Pinjam);
             Controls.Add(dataGridView1);
-            Margin = new Padding(5, 5, 5, 5);
             Name = "Peminjaman";
             Text = "Form2";
             Load += Peminjaman_Load;
