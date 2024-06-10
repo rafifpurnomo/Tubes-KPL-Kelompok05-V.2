@@ -2,13 +2,15 @@
   {
     "namaUser": "Ghaziveda Belvanaufal",
     "No_Anggota": "002",
+    "password" :  "belva",
     "no_Telpon": "1302220011",
     "Role": "Anggota Perpustakaan",
-    "status": 0
+    "status": 0 
   },
   {
     "namaUser": "Daffa Adrianto",
     "No_Anggota": "003",
+    "password": "daffa",
     "Role": "Anggota Perpustakaan",
     "no_Telpon": "1302220151",
     "status": 0
@@ -16,6 +18,7 @@
   {
     "namaUser": "Rizky Septian",
     "No_Anggota": "004",
+    "password": "rizky",
     "Role": "Anggota Perpustakaan",
     "no_Telpon": "1302220121",
     "status": 0
@@ -23,6 +26,7 @@
   {
     "namaUser": "Muhammad Ghiyats",
     "No_Anggota": "005",
+    "password": "ghiyats",
     "Role": "Admin",
     "no_Telpon": "1302220109",
     "status": 0
@@ -30,6 +34,7 @@
   {
     "namaUser": "Reihan Ramdhana",
     "No_Anggota": "006",
+    "password": "reihan",
     "Role": "Admin",
     "no_Telpon": "1302220048",
     "status": 0
@@ -37,15 +42,9 @@
   {
     "namaUser": "Muhammad Zidan",
     "No_Anggota": "007",
+    "password": "zidan",
     "Role": "Admin",
     "no_Telpon": "1302223039",
-    "status": 0
-  },
-  {
-    "namaUser": "string",
-    "No_Anggota": "string",
-    "Role": "string",
-    "no_Telpon": "string",
     "status": 0
   }
 ]
