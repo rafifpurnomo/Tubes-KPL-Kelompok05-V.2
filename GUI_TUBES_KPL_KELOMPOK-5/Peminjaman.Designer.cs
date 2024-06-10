@@ -36,6 +36,7 @@
             Stok = new DataGridViewTextBoxColumn();
             Pinjam = new Button();
             Keluar = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(677, 188);
             dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += this.dataGridView1_CellContentClick;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // KodeBuku
             // 
@@ -93,7 +94,7 @@
             Pinjam.TabIndex = 1;
             Pinjam.Text = "Pinjam";
             Pinjam.UseVisualStyleBackColor = true;
-            Pinjam.Click += this.Pinjam_Click;
+    
             // 
             // Keluar
             // 
@@ -104,18 +105,32 @@
             Keluar.Text = "Keluar";
             Keluar.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ActiveCaption;
+            label1.Location = new Point(32, 21);
+            label1.Name = "label1";
+            label1.Size = new Size(179, 46);
+            label1.TabIndex = 3;
+            label1.Text = "PerpusGO";
+            // 
             // Peminjaman
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(Keluar);
             Controls.Add(Pinjam);
             Controls.Add(dataGridView1);
             Name = "Peminjaman";
             Text = "Form2";
+            Load += Peminjaman_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -128,5 +143,6 @@
         private DataGridViewTextBoxColumn Stok;
         private Button Pinjam;
         private Button Keluar;
+        private Label label1;
     }
 }
