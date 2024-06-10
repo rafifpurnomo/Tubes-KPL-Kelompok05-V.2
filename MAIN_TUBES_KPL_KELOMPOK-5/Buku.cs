@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MAIN_TUBES_KPL_KELOMPOK_5
 {
-    internal class Buku
+    public class Buku
     {
         public string kodeBuku { get; set; }
         public string Judul { get; set; }
@@ -27,7 +27,10 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
             stok = jumlahBuku;
         }
 
-        public void displayBook()
+      
+    
+
+    public void displayBook()
         {
             Console.WriteLine("Kode buku: " + kodeBuku);
             Console.WriteLine("Judul Buku: " + Judul);

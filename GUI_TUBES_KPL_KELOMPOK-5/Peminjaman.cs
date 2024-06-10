@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 using System.Windows.Forms;
+using MAIN_TUBES_KPL_KELOMPOK_5;
 
 namespace GUI_TUBES_KPL_KELOMPOK_5
 {
@@ -30,29 +31,55 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 
         private List<Buku> ReadJsonFile(string filePath)
         {
-            string json;
-            using (StreamReader reader = new StreamReader(filePath))
+            try
             {
-                json = reader.ReadToEnd();
+                string json;
+                using (StreamReader reader = new StreamReader(filePath))
+                {
+                    json = reader.ReadToEnd();
+                }
+
+                List<Buku> daftarBuku = JsonSerializer.Deserialize<List<Buku>>(json);
+                return daftarBuku;
             }
-
-            List<Buku> daftarBuku = JsonSerializer.Deserialize<List<Buku>>(json);
-
-            return daftarBuku;
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error reading JSON file: {ex.Message}");
+                return new List<Buku>();
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Implement your logic here if needed
+            List<Buku> daftarBuku = ReadJsonFile("C:\\semester 4\\konstruksi perangkat lunak\\TubesKPL\\Tubes-KPL-Kelompok05-V.2\\API_TUBES_KPL_KELOMPOK-05\\Data\\DataBuku.json");
+
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                string kodeBuku = row.Cells[0].Value.ToString();
+                Buku buku = searchBookByKode(kodeBuku, daftarBuku);
+                if (buku != null)
+                {
+                    new DetailBuku(buku).ShowDialog();
+                }
+            }
         }
 
-        private class Buku
+        public Buku searchBookByKode(string kode, List<Buku> daftarBuku)
         {
-            public string kodeBuku { get; set; }
-            public string Judul { get; set; }
-            public string Penulis { get; set; }
-            public int TahunTerbit { get; set; }
-            public int stok { get; set; }
+            for (int i = 0; i < daftarBuku.Count; i++)
+            {
+                if (daftarBuku[i].kodeBuku == kode)
+                {
+                    return daftarBuku[i];
+                }
+            }
+            return null;
+        }
+
+        private void Pinjam_Click(object sender, EventArgs e)
+        {
+            // Implement your logic here if needed
         }
     }
 }
