@@ -15,7 +15,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
            
             Application.Run(new LoginPage());
 
-            Application.Run(new Peminjaman());
+            //Application.Run(new Peminjaman());
 
 
         }

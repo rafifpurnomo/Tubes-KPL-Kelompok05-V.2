@@ -34,6 +34,7 @@
             LoginBTN = new Button();
             usernameInput = new TextBox();
             passInput = new TextBox();
+            label4 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -43,15 +44,14 @@
             label1.ForeColor = SystemColors.ControlText;
             label1.Location = new Point(243, 41);
             label1.Name = "label1";
-            label1.Size = new Size(249, 35);
+            label1.Size = new Size(0, 35);
             label1.TabIndex = 0;
-            label1.Text = "APLIKASI PerpusGO";
             label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(124, 169);
+            label2.Location = new Point(243, 135);
             label2.Name = "label2";
             label2.Size = new Size(91, 20);
             label2.TabIndex = 1;
@@ -61,7 +61,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(124, 242);
+            label3.Location = new Point(243, 208);
             label3.Name = "label3";
             label3.Size = new Size(70, 20);
             label3.TabIndex = 2;
@@ -69,7 +69,7 @@
             // 
             // LoginBTN
             // 
-            LoginBTN.Location = new Point(409, 233);
+            LoginBTN.Location = new Point(338, 286);
             LoginBTN.Name = "LoginBTN";
             LoginBTN.Size = new Size(94, 29);
             LoginBTN.TabIndex = 3;
@@ -79,7 +79,7 @@
             // 
             // usernameInput
             // 
-            usernameInput.Location = new Point(124, 192);
+            usernameInput.Location = new Point(243, 158);
             usernameInput.Name = "usernameInput";
             usernameInput.Size = new Size(189, 27);
             usernameInput.TabIndex = 5;
@@ -87,16 +87,29 @@
             // 
             // passInput
             // 
-            passInput.Location = new Point(124, 265);
+            passInput.Location = new Point(243, 231);
             passInput.Name = "passInput";
             passInput.Size = new Size(189, 27);
             passInput.TabIndex = 6;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = SystemColors.ActiveCaption;
+            label4.Location = new Point(243, 50);
+            label4.Margin = new Padding(2, 0, 2, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(179, 46);
+            label4.TabIndex = 7;
+            label4.Text = "PerpusGO";
             // 
             // LoginPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label4);
             Controls.Add(passInput);
             Controls.Add(usernameInput);
             Controls.Add(LoginBTN);
@@ -117,5 +130,6 @@
         private Button LoginBTN;
         private TextBox usernameInput;
         private TextBox passInput;
+        private Label label4;
     }
 }

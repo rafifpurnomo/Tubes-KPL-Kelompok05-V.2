@@ -20,11 +20,11 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 
         private void PopulateDataGridView()
         {
-            List<Buku> daftarBuku = ReadJsonFile("C:\\semester 4\\konstruksi perangkat lunak\\TubesKPL\\Tubes-KPL-Kelompok05-V.2\\API_TUBES_KPL_KELOMPOK-05\\Data\\DataBuku.json");
+            List<Buku> daftarBuku = ReadJsonFile("C:\\Users\\Rafif Purnomo\\OneDrive\\Documents\\Coding\\C#\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataBuku.json");
 
             foreach (var buku in daftarBuku)
             {
-                dataGridView1.Rows.Add(buku.kodeBuku, buku.Judul, buku.Penulis, buku.TahunTerbit, buku.stok);
+                tableDaftarBuku.Rows.Add(buku.kodeBuku, buku.Judul, buku.Penulis, buku.TahunTerbit, buku.stok);
             }
         }
 
@@ -53,6 +53,11 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
             public string Penulis { get; set; }
             public int TahunTerbit { get; set; }
             public int stok { get; set; }
+        }
+
+        private void kembaliBTN_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

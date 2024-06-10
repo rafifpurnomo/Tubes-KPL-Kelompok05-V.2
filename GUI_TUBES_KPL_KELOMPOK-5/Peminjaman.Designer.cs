@@ -28,29 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            tableDaftarBuku = new DataGridView();
             KodeBuku = new DataGridViewTextBoxColumn();
             Judul = new DataGridViewTextBoxColumn();
             Penulis = new DataGridViewTextBoxColumn();
             TahunTerbit = new DataGridViewTextBoxColumn();
             Stok = new DataGridViewTextBoxColumn();
             Pinjam = new Button();
-            Keluar = new Button();
+            kembaliBTN = new Button();
             label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tableDaftarBuku).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // tableDaftarBuku
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { KodeBuku, Judul, Penulis, TahunTerbit, Stok });
-            dataGridView1.Location = new Point(110, 171);
-            dataGridView1.Margin = new Padding(5, 5, 5, 5);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1100, 301);
-            dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            tableDaftarBuku.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tableDaftarBuku.Columns.AddRange(new DataGridViewColumn[] { KodeBuku, Judul, Penulis, TahunTerbit, Stok });
+            tableDaftarBuku.Location = new Point(44, 107);
+            tableDaftarBuku.Name = "tableDaftarBuku";
+            tableDaftarBuku.RowHeadersWidth = 51;
+            tableDaftarBuku.Size = new Size(681, 188);
+            tableDaftarBuku.TabIndex = 0;
+            tableDaftarBuku.CellContentClick += dataGridView1_CellContentClick;
             // 
             // KodeBuku
             // 
@@ -89,31 +88,30 @@
             // 
             // Pinjam
             // 
-            Pinjam.Location = new Point(814, 600);
-            Pinjam.Margin = new Padding(5, 5, 5, 5);
+            Pinjam.Location = new Point(501, 375);
             Pinjam.Name = "Pinjam";
-            Pinjam.Size = new Size(153, 46);
+            Pinjam.Size = new Size(94, 29);
             Pinjam.TabIndex = 1;
             Pinjam.Text = "Pinjam";
             Pinjam.UseVisualStyleBackColor = true;
-
             // 
-            // Keluar
+            // kembaliBTN
             // 
-            Keluar.Location = new Point(1086, 597);
-            Keluar.Margin = new Padding(5, 5, 5, 5);
-            Keluar.Name = "Keluar";
-            Keluar.Size = new Size(153, 46);
-            Keluar.TabIndex = 2;
-            Keluar.Text = "Keluar";
-            Keluar.UseVisualStyleBackColor = true;
+            kembaliBTN.Location = new Point(668, 373);
+            kembaliBTN.Name = "kembaliBTN";
+            kembaliBTN.Size = new Size(94, 29);
+            kembaliBTN.TabIndex = 2;
+            kembaliBTN.Text = "kembali";
+            kembaliBTN.UseVisualStyleBackColor = true;
+            kembaliBTN.Click += kembaliBTN_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ActiveCaption;
-            label1.Location = new Point(32, 21);
+            label1.Location = new Point(20, 13);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(179, 46);
             label1.TabIndex = 3;
@@ -121,36 +119,31 @@
             // 
             // Peminjaman
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-
             ClientSize = new Size(800, 450);
             Controls.Add(label1);
-
-            ClientSize = new Size(1300, 720);
-
-            Controls.Add(Keluar);
+            Controls.Add(kembaliBTN);
             Controls.Add(Pinjam);
-            Controls.Add(dataGridView1);
-            Margin = new Padding(5, 5, 5, 5);
+            Controls.Add(tableDaftarBuku);
             Name = "Peminjaman";
             Text = "Form2";
             Load += Peminjaman_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tableDaftarBuku).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView tableDaftarBuku;
         private DataGridViewTextBoxColumn KodeBuku;
         private DataGridViewTextBoxColumn Judul;
         private DataGridViewTextBoxColumn Penulis;
         private DataGridViewTextBoxColumn TahunTerbit;
         private DataGridViewTextBoxColumn Stok;
         private Button Pinjam;
-        private Button Keluar;
+        private Button kembaliBTN;
         private Label label1;
     }
 }

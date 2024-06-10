@@ -28,12 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "MenuPengguna";
+            label1 = new Label();
+            namaUserDisplay = new Label();
+            pinjamBukuBTN = new Button();
+            logoutBTN = new Button();
+            SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(41, 23);
+            label1.Name = "label1";
+            label1.Size = new Size(184, 31);
+            label1.TabIndex = 0;
+            label1.Text = "Selamat Datang";
+            label1.Click += label1_Click;
+            // 
+            // namaUserDisplay
+            // 
+            namaUserDisplay.AutoSize = true;
+            namaUserDisplay.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            namaUserDisplay.Location = new Point(231, 23);
+            namaUserDisplay.Name = "namaUserDisplay";
+            namaUserDisplay.Size = new Size(114, 31);
+            namaUserDisplay.TabIndex = 1;
+            namaUserDisplay.Text = "namauser";
+            // 
+            // pinjamBukuBTN
+            // 
+            pinjamBukuBTN.Location = new Point(41, 76);
+            pinjamBukuBTN.Name = "pinjamBukuBTN";
+            pinjamBukuBTN.Size = new Size(129, 29);
+            pinjamBukuBTN.TabIndex = 2;
+            pinjamBukuBTN.Text = "pinjam buku";
+            pinjamBukuBTN.UseVisualStyleBackColor = true;
+            pinjamBukuBTN.Click += pinjamBukuBTN_Click;
+            // 
+            // logoutBTN
+            // 
+            logoutBTN.Location = new Point(41, 131);
+            logoutBTN.Name = "logoutBTN";
+            logoutBTN.Size = new Size(129, 29);
+            logoutBTN.TabIndex = 3;
+            logoutBTN.Text = "log out";
+            logoutBTN.UseVisualStyleBackColor = true;
+            logoutBTN.Click += logoutBTN_Click;
+            // 
+            // MenuPengguna
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(logoutBTN);
+            Controls.Add(pinjamBukuBTN);
+            Controls.Add(namaUserDisplay);
+            Controls.Add(label1);
+            Name = "MenuPengguna";
+            Text = "MenuPengguna";
+            Load += MenuPengguna_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
+        private Label namaUserDisplay;
+        private Button pinjamBukuBTN;
+        private Button logoutBTN;
     }
 }
