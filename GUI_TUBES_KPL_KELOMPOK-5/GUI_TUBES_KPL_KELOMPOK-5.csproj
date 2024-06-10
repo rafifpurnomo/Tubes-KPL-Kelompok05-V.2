@@ -9,4 +9,26 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Data\DataAkun.json" />
+    <None Remove="Data\DataBuku.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\DataAkun.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Data\DataBuku.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MAIN_TUBES_KPL_KELOMPOK-5\MAIN_TUBES_KPL_KELOMPOK-5.csproj" />
+  </ItemGroup>
+
 </Project>
