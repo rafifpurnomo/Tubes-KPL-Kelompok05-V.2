@@ -43,12 +43,13 @@
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { KodeBuku, Judul, Penulis, TahunTerbit, Stok });
-            dataGridView1.Location = new Point(68, 107);
+            dataGridView1.Location = new Point(110, 171);
+            dataGridView1.Margin = new Padding(5, 5, 5, 5);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(677, 188);
+            dataGridView1.Size = new Size(1100, 301);
             dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += this.dataGridView1_CellContentClick;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // KodeBuku
             // 
@@ -87,31 +88,33 @@
             // 
             // Pinjam
             // 
-            Pinjam.Location = new Point(501, 375);
+            Pinjam.Location = new Point(814, 600);
+            Pinjam.Margin = new Padding(5, 5, 5, 5);
             Pinjam.Name = "Pinjam";
-            Pinjam.Size = new Size(94, 29);
+            Pinjam.Size = new Size(153, 46);
             Pinjam.TabIndex = 1;
             Pinjam.Text = "Pinjam";
             Pinjam.UseVisualStyleBackColor = true;
-            Pinjam.Click += this.Pinjam_Click;
             // 
             // Keluar
             // 
-            Keluar.Location = new Point(668, 373);
+            Keluar.Location = new Point(1086, 597);
+            Keluar.Margin = new Padding(5, 5, 5, 5);
             Keluar.Name = "Keluar";
-            Keluar.Size = new Size(94, 29);
+            Keluar.Size = new Size(153, 46);
             Keluar.TabIndex = 2;
             Keluar.Text = "Keluar";
             Keluar.UseVisualStyleBackColor = true;
             // 
             // Peminjaman
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1300, 720);
             Controls.Add(Keluar);
             Controls.Add(Pinjam);
             Controls.Add(dataGridView1);
+            Margin = new Padding(5, 5, 5, 5);
             Name = "Peminjaman";
             Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

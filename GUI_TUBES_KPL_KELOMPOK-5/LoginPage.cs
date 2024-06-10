@@ -13,7 +13,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
             InitializeComponent();
 
             dataAkun = new List<Akun>();
-            string filePath = "C:\\Users\\Rafif Purnomo\\OneDrive\\Documents\\Coding\\C#\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataAkun.json";
+            string filePath = "C:\\TubesKPL\\V2\\Tubes-KPL-Kelompok05-V.2\\API_TUBES_KPL_KELOMPOK-05\\Data\\DataAkun.json";
             readAkunJson(filePath);
         }
 
@@ -71,12 +71,12 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
                 Akun userLogin = validateLogin(noAnggota, password);
                 if (userLogin != null)
                 {
-                    if (userLogin.Role.Equals("Anggota Perpustakaan"))
+                    if (userLogin.Role.Equals("Admin"))
                     {
                         MenuAdmin menuadmin = new MenuAdmin();
                         menuadmin.Visible = true;
                         this.Visible = false;
-                    } else if (userLogin.Role.Equals("Admin"))
+                    } else if (userLogin.Role.Equals("Anggota Perpustakaan"))
                     {
                         MenuPengguna menuPengguna = new MenuPengguna();
                         menuPengguna.Visible = true;
