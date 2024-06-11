@@ -20,7 +20,8 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            ManajemenAkun manajemenAkun = new ManajemenAkun();  
+            manajemenAkun.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
