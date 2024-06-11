@@ -31,6 +31,8 @@
             label1 = new Label();
             pinjamBuku = new Button();
             daftarPinjaman = new Button();
+            label2 = new Label();
+            button1 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -64,11 +66,32 @@
             daftarPinjaman.UseVisualStyleBackColor = true;
             daftarPinjaman.Click += daftarPinjaman_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(12, 9);
+            label2.Name = "label2";
+            label2.Size = new Size(50, 20);
+            label2.TabIndex = 4;
+            label2.Text = "label2";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(288, 318);
+            button1.Name = "button1";
+            button1.Size = new Size(205, 85);
+            button1.TabIndex = 5;
+            button1.Text = "Log Out";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
+            // 
             // MenuPengguna
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
+            Controls.Add(label2);
             Controls.Add(daftarPinjaman);
             Controls.Add(pinjamBuku);
             Controls.Add(label1);
@@ -83,5 +106,7 @@
         private Label label1;
         private Button pinjamBuku;
         private Button daftarPinjaman;
+        private Label label2;
+        private Button button1;
     }
 }

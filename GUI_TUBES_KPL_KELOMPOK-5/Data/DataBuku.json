@@ -1,7 +1,7 @@
 [
   {
     "kodeBuku": "BK001",
-    "Judul": "Harry Potter and the Philosopher's Stone",
+    "Judul": "Harry Potter and the Philosopher\u0027s Stone",
     "Sinopsis": "Harry Potter, seorang anak yatim piatu yang menemukan bahwa ia adalah seorang penyihir dan diterima di Sekolah Sihir Hogwarts.",
     "Penulis": "J.K. Rowling",
     "TahunTerbit": 1997,
@@ -27,12 +27,12 @@
     "jumlahBuku": 10
   },
   {
-    "kodeBuku": "string",
-    "Judul": "string",
-    "Sinopsis": "string",
-    "Penulis": "J.R.R. Tolkien",
-    "TahunTerbit": 0,
-    "stok": 0,
-    "jumlahBuku": 0
+    "kodeBuku": "BK010",
+    "Judul": "test",
+    "Sinopsis": "test",
+    "Penulis": "test",
+    "TahunTerbit": 1234,
+    "stok": 1,
+    "jumlahBuku": 1
   }
 ]

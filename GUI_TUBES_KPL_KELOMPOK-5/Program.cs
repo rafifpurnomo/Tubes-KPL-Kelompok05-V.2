@@ -16,7 +16,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
             Perpustakaan perpustakaan = new Perpustakaan();
             List<Buku> listBuku = perpustakaan.GetBuku();
             List<Akun> listAkun  = perpustakaan.GetAkun();
-            Application.Run(new MenuPengguna());
+            Application.Run(new LoginPage());
 
 
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MAIN_TUBES_KPL_KELOMPOK_5;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
         public MenuPengguna()
         {
             InitializeComponent();
+            label2.Text = UserSession.namaUser;
         }
         public static PeminjamanBuku peminjamanBuku;
 
@@ -32,5 +34,12 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
             daftarPeminjamanPengguna.Show();
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            UserSession.clearSession();
+            LoginPage newLogin = new LoginPage();
+            newLogin.Visible = true;
+            this.Dispose();
+        }
     }
 }

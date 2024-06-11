@@ -13,7 +13,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
             InitializeComponent();
 
             dataAkun = new List<Akun>();
-            string filePath = "C:\\semester 4\\konstruksi perangkat lunak\\TubesKPL\\Tubes-KPL-Kelompok05-V.2\\API_TUBES_KPL_KELOMPOK-05\\Data\\DataAkun.json";
+            string filePath = "Data\\DataAkun.json";
             readAkunJson(filePath);
         }
 
@@ -64,29 +64,38 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
         {
             string noAnggota = usernameInput.Text;
             string password = passInput.Text;
-            
+
             try
             {
-               
                 Akun userLogin = validateLogin(noAnggota, password);
                 if (userLogin != null)
                 {
-                    if (userLogin.Role.Equals("Admin"))
+                    UserSession.namaUser = userLogin.namaUser;
+                    UserSession.No_Anggota = userLogin.No_Anggota;
+                    UserSession.password = userLogin.password;
+                    UserSession.Role = userLogin.Role;
+                    UserSession.no_telpon = userLogin.no_Telpon;
+                    UserSession.status = (int)userLogin.status;
+
+                    if (UserSession.Role.Equals("Admin"))
                     {
                         MenuAdmin menuadmin = new MenuAdmin();
                         menuadmin.Visible = true;
                         this.Visible = false;
-                    } else if (userLogin.Role.Equals("Anggota Perpustakaan"))
+                    }
+                    else if (UserSession.Role.Equals("Anggota Perpustakaan"))
                     {
                         MenuPengguna menuPengguna = new MenuPengguna();
                         menuPengguna.Visible = true;
                         this.Visible = false;
                     }
-                } else
+                }
+                else
                 {
                     MessageBox.Show("no anggota atau password salah");
                 }
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
                 Console.WriteLine(ex.Message);

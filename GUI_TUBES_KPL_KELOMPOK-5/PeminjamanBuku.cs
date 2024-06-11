@@ -9,10 +9,12 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 {
     public partial class PeminjamanBuku : Form
     {
+        public string filePathDataBuku = "C:\\Users\\Rafif Purnomo\\OneDrive\\Documents\\Coding\\C#\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataBuku.json";
         public PeminjamanBuku(MenuPengguna menuPengguna)
         {
             InitializeComponent();
             this.menuPengguna = menuPengguna;
+            dataGridView1.ReadOnly = true;
         }
 
         MenuPengguna menuPengguna;
@@ -24,7 +26,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 
         private void PopulateDataGridView()
         {
-            List<Buku> daftarBuku = ReadJsonFile("C:\\Kuliah\\semester 4\\Konstruksi Perangkat Lunak\\Tubes\\Kelompok_5\\Tubes-KPL-Kelompok05-V.2\\API_TUBES_KPL_KELOMPOK-05\\Data\\DataBuku.json");
+            List<Buku> daftarBuku = ReadJsonFile(filePathDataBuku);
 
             foreach (var buku in daftarBuku)
             {
@@ -54,7 +56,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            List<Buku> daftarBuku = ReadJsonFile("C:\\Kuliah\\semester 4\\Konstruksi Perangkat Lunak\\Tubes\\Kelompok_5\\Tubes-KPL-Kelompok05-V.2\\API_TUBES_KPL_KELOMPOK-05\\Data\\DataBuku.json");
+            List<Buku> daftarBuku = ReadJsonFile(filePathDataBuku);
 
             if (e.RowIndex >= 0)
             {

@@ -62,5 +62,10 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
         {
             this.Dispose();
         }
+
+        private void Pinjam_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

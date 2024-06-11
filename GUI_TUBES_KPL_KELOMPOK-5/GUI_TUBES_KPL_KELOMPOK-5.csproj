@@ -12,9 +12,15 @@
   <ItemGroup>
     <None Remove="Data\DataAkun.json" />
     <None Remove="Data\DataBuku.json" />
+    <None Remove="Data\DataPeminjaman.json" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Data\DataPeminjaman.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
     <Content Include="Data\DataAkun.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
