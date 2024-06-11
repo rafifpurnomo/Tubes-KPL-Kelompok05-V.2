@@ -16,5 +16,21 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
         {
             InitializeComponent();
         }
+        public static PeminjamanBuku peminjamanBuku;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.SetVisibleCore(false);
+            PeminjamanBuku peminjamanBuku = new PeminjamanBuku(this);
+            peminjamanBuku.Show();
+        }
+
+        private void daftarPinjaman_Click(object sender, EventArgs e)
+        {
+            this.SetVisibleCore(false);
+            DaftarPeminjamanPengguna daftarPeminjamanPengguna = new DaftarPeminjamanPengguna(this);
+            daftarPeminjamanPengguna.Show();
+        }
+
     }
 }

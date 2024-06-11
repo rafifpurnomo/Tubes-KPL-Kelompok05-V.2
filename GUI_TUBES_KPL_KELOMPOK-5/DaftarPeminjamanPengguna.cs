@@ -10,22 +10,19 @@ using System.Windows.Forms;
 
 namespace GUI_TUBES_KPL_KELOMPOK_5
 {
-    public partial class MenuAdmin : Form
+    public partial class DaftarPeminjamanPengguna : Form
     {
-        public MenuAdmin()
+        public DaftarPeminjamanPengguna(MenuPengguna menuPengguna)
         {
             InitializeComponent();
+            this.menuPengguna = menuPengguna;
         }
+        MenuPengguna menuPengguna;
 
-        private void button1_Click(object sender, EventArgs e)
+        private void back_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.SetVisibleCore(false);
-            new DaftarBuku().Show();
+            this.Close();
+            menuPengguna.Show();
         }
     }
 }
