@@ -24,5 +24,10 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
             this.Close();
             menuPengguna.Show();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

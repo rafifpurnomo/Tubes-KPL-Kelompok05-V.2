@@ -20,15 +20,16 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
         public bool statusPengembalian { get; set; }
         private FineManager FineManager { get; set; }
 
-        public Peminjaman(string ID_Peminjaman, string JudulBuku, Akun Peminjam, string TanggalPinjam, string DeadLinePengembalian)
+        public Peminjaman(string JudulBuku, Akun Peminjam, string TanggalPinjam, string DeadLinePengembalian)
         {
-            this.ID_Peminjaman = ID_Peminjaman;
+            this.ID_Peminjaman = ID_count.ToString();
             this.JudulBuku = JudulBuku;
             this.Peminjam = Peminjam;
             this.TanggalPinjam = TanggalPinjam;
             DateTime dateTime =  StringLibrary.KonversiStringKeDate(TanggalPinjam).AddDays(7);
             this.DeadLinePengembalian = StringLibrary.KonversiDateKeString(dateTime);
             this.statusPengembalian = false;
+            ID_count++;
         }
 
         public FineManager GetFineManager()

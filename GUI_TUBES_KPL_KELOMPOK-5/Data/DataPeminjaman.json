@@ -1,3 +1,34 @@
 [
-
+  {
+    "ID_Peminjaman": "1",
+    "Peminjam": {
+      "namaUser": "Ghaziveda Belvanaufal",
+      "No_Anggota": "002",
+      "password": "belva",
+      "Role": "Anggota Perpustakaan",
+      "no_Telpon": "1302220011",
+      "status": 0
+    },
+    "JudulBuku": "Harry Potter and the Philosopher\u0027s Stone",
+    "TanggalPinjam": "2024 06 11",
+    "DeadLinePengembalian": "2024 06 18",
+    "TanggalPengembalian": null,
+    "statusPengembalian": false
+  },
+  {
+    "ID_Peminjaman": "2",
+    "Peminjam": {
+      "namaUser": "Ghaziveda Belvanaufal",
+      "No_Anggota": "002",
+      "password": "belva",
+      "Role": "Anggota Perpustakaan",
+      "no_Telpon": "1302220011",
+      "status": 0
+    },
+    "JudulBuku": "The Hobbit",
+    "TanggalPinjam": "2024 06 11",
+    "DeadLinePengembalian": "2024 06 18",
+    "TanggalPengembalian": null,
+    "statusPengembalian": false
+  }
 ]
