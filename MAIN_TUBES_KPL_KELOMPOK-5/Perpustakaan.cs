@@ -1,39 +1,57 @@
 
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using LIBRARY_TUBES_KPL_KELOMPOK_05;
 
 namespace MAIN_TUBES_KPL_KELOMPOK_5
 {
-    internal class Perpustakaan
+    public class Perpustakaan
     {
-        private List<Buku> buku = new List<Buku>
+        public Perpustakaan()
         {
-            new Buku("BK001", "Dasar Pemrograman JS", "Javascript", "Rafif" ,2024, 10),
-            new Buku("BK002", "Dasar Pemrograman GO", "Golang", "Belva" ,2010, 10),
-            new Buku("BK003", "Dasar Pemrograman C#", "C#", "Zidan" ,2022, 10),
-            new Buku("BK004", "Dasar Pemrograman WEB", "WEB", "Rizki" ,2009, 10),
-            new Buku("BK005", "Dasar Pemrograman C++", "C++", "Daffa" ,2021, 10),
-            new Buku("BK006", "Dasar Pemrograman Python", "Python", "Ghiyats" ,2018, 10),
-            new Buku("BK007", "Dasar Networking", "Networking", "Dana" ,2018, 10),
-        };
+            DaftarPeminjaman = new List<Peminjaman>();
+            listAkun = ReadJsonFile<List<Akun>>(JsonPathAkun, "akun");
+            buku = ReadJsonFile<List<Buku>>(JsonPathBuku, "buku"); 
+        }
+
+        public const string JsonPathBuku = "C:\\Kuliah\\semester 4\\Konstruksi Perangkat Lunak\\Tubes\\Kelompok_5\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataBuku.json";
+        public const string JsonPathPeminjaman  = "";
+        public const string JsonPathAkun = "C:\\Kuliah\\semester 4\\Konstruksi Perangkat Lunak\\Tubes\\Kelompok_5\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataAkun.json";
+
+        private List<Buku> buku = new List<Buku>();
 
         private Buku[] bukuArray;
 
         private List<Peminjaman> DaftarPeminjaman;
+
+        private List<Akun> listAkun = new List<Akun>();
         
         ConfigManager configManager = new ConfigManager();
         
-        public Perpustakaan()
-        {
-            DaftarPeminjaman = new List<Peminjaman>();
-        }
+        
         public void toArray()
         {
             bukuArray = buku.ToArray();
+        }
+
+        public List<Peminjaman> GetPeminjamen()
+        {
+            return DaftarPeminjaman;
+        }
+
+        public List<Buku> GetBuku()
+        {
+            return buku;
+        }
+
+        public List<Akun> GetAkun()
+        {
+            return listAkun;
         }
 
         // Implementasikan Method 
@@ -70,9 +88,9 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
             {
                 DateTime sekarang = DateTime.Now;
                 string peminjaman = StringLibrary.KonversiDateKeString(sekarang);
-                string pengembalian = StringLibrary.KonversiDateKeString(sekarang.AddDays(configManager.BatasWaktuPeminjaman));
+                string deadlinePengembalian = StringLibrary.KonversiDateKeString(sekarang.AddDays(configManager.BatasWaktuPeminjaman));
 
-                Peminjaman peminjamanBaru = new Peminjaman(Peminjaman.ID_count.ToString(), rakBuku[idx_buku].Judul, pengguna, peminjaman, pengembalian, false);
+                Peminjaman peminjamanBaru = new Peminjaman(Peminjaman.ID_count.ToString(), rakBuku[idx_buku].Judul, pengguna, peminjaman, deadlinePengembalian);
                 DaftarPeminjaman.Add(peminjamanBaru);
                 Console.WriteLine("Berhasil melakukan peminjaman");
                 rakBuku[idx_buku].stok--;
@@ -160,6 +178,62 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
                 else
                 {
                     Console.WriteLine("ID peminjaman tidak ditemukan");
+                }
+            }
+        }
+
+        public T ReadJsonFile<T>(string filePath, string flag)
+        {
+            try
+            {
+                string json;
+                using (StreamReader reader = new StreamReader(filePath))
+                {
+                    json = reader.ReadToEnd();
+                }
+
+                if (flag == "buku")
+                {
+                    List<Buku> listData = JsonSerializer.Deserialize<List<Buku>>(json);
+                    return (T)(object)listData; // Konversi ke List<Buku>
+                }
+                else if (flag == "akun")
+                {
+                    List<Akun> listData = JsonSerializer.Deserialize<List<Akun>>(json);
+                    return (T)(object)listData; // Konversi ke List<Akun>
+                }
+                else if (flag == "peminjaman")
+                {
+                    List<Peminjaman> listData = JsonSerializer.Deserialize<List<Peminjaman>>(json);
+                    return (T)(object)listData; // Konversi ke List<Peminjaman>
+                }
+                else
+                {
+                    throw new ArgumentException("Invalid flag value.");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Logging the error
+                Debug.WriteLine($"Error reading JSON file: {ex.Message}");
+                // Alternatively, you could use Console.WriteLine
+                Console.WriteLine($"Error reading JSON file: {ex.Message}");
+
+                if (flag == "buku")
+                {
+                    return (T)(object)new List<Buku>();
+                }
+                else if (flag == "akun")
+                {
+                    return (T)(object)new List<Akun>();
+                }
+                else if (flag == "peminjaman")
+                {
+                    return (T)(object)new List<Peminjaman>();
+                }
+                else
+                {
+                    return default(T);
                 }
             }
         }

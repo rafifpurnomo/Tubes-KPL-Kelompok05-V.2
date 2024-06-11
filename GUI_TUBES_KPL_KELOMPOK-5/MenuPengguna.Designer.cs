@@ -28,12 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "MenuPengguna";
+            label1 = new Label();
+            pinjamBuku = new Button();
+            daftarPinjaman = new Button();
+            SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 40.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ActiveCaption;
+            label1.Location = new Point(217, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(331, 89);
+            label1.TabIndex = 0;
+            label1.Text = "PerpusGo";
+            // 
+            // pinjamBuku
+            // 
+            pinjamBuku.Location = new Point(154, 197);
+            pinjamBuku.Name = "pinjamBuku";
+            pinjamBuku.Size = new Size(205, 85);
+            pinjamBuku.TabIndex = 1;
+            pinjamBuku.Text = "Pinjam Buku";
+            pinjamBuku.UseVisualStyleBackColor = true;
+            pinjamBuku.Click += button1_Click;
+            // 
+            // daftarPinjaman
+            // 
+            daftarPinjaman.Location = new Point(415, 197);
+            daftarPinjaman.Name = "daftarPinjaman";
+            daftarPinjaman.Size = new Size(205, 85);
+            daftarPinjaman.TabIndex = 3;
+            daftarPinjaman.Text = "Daftar Pinjaman";
+            daftarPinjaman.UseVisualStyleBackColor = true;
+            daftarPinjaman.Click += daftarPinjaman_Click;
+            // 
+            // MenuPengguna
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(daftarPinjaman);
+            Controls.Add(pinjamBuku);
+            Controls.Add(label1);
+            Name = "MenuPengguna";
+            Text = "MenuPengguna";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
+        private Button pinjamBuku;
+        private Button daftarPinjaman;
     }
 }
