@@ -13,7 +13,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
             InitializeComponent();
 
             dataAkun = new List<Akun>();
-            string filePath = Path.Combine(Application.StartupPath, "Data", "DataAkun.json"); ;
+            string filePath = "Data\\DataAkun.json";
             readAkunJson(filePath);
         }
 
@@ -100,11 +100,6 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
                 MessageBox.Show("Error: " + ex.Message);
                 Console.WriteLine(ex.Message);
             }
-        }
-
-        private void LoginPage_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

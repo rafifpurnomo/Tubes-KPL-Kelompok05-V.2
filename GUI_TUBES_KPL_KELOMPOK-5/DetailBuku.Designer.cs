@@ -184,7 +184,6 @@
             Margin = new Padding(4, 5, 4, 5);
             Name = "DetailBuku";
             Text = "DetailBuku";
-            Load += DetailBuku_Load;
             ResumeLayout(false);
             PerformLayout();
         }

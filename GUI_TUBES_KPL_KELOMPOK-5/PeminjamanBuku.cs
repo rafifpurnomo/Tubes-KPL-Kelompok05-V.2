@@ -7,14 +7,17 @@ using MAIN_TUBES_KPL_KELOMPOK_5;
 
 namespace GUI_TUBES_KPL_KELOMPOK_5
 {
-    public partial class Peminjaman : Form
+    public partial class PeminjamanBuku : Form
     {
-        private string fileDataBuku = "Data\\DataBuku.json";
-        public Peminjaman()
+        public string filePathDataBuku = "C:\\Users\\Rafif Purnomo\\OneDrive\\Documents\\Coding\\C#\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataBuku.json";
+        public PeminjamanBuku(MenuPengguna menuPengguna)
         {
             InitializeComponent();
+            this.menuPengguna = menuPengguna;
             dataGridView1.ReadOnly = true;
         }
+
+        MenuPengguna menuPengguna;
 
         private void Peminjaman_Load(object sender, EventArgs e)
         {
@@ -23,7 +26,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 
         private void PopulateDataGridView()
         {
-            List<Buku> daftarBuku = ReadJsonFile(fileDataBuku);
+            List<Buku> daftarBuku = ReadJsonFile(filePathDataBuku);
 
             foreach (var buku in daftarBuku)
             {
@@ -53,7 +56,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            List<Buku> daftarBuku = ReadJsonFile(fileDataBuku);
+            List<Buku> daftarBuku = ReadJsonFile(filePathDataBuku);
 
             if (e.RowIndex >= 0)
             {
@@ -84,9 +87,10 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
             // Implement your logic here if needed
         }
 
-        private void kembaliBTN_Click(object sender, EventArgs e)
+        private void Back_Click_1(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Close();
+            menuPengguna.Show();
         }
     }
 }

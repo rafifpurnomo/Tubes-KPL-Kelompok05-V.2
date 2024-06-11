@@ -1,6 +1,6 @@
 ﻿namespace GUI_TUBES_KPL_KELOMPOK_5
 {
-    partial class Peminjaman
+    partial class PeminjamanBuku
     {
         /// <summary>
         /// Required designer variable.
@@ -35,8 +35,8 @@
             TahunTerbit = new DataGridViewTextBoxColumn();
             Stok = new DataGridViewTextBoxColumn();
             Pinjam = new Button();
-            kembaliBTN = new Button();
             label1 = new Label();
+            Back = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -96,16 +96,6 @@
             Pinjam.UseVisualStyleBackColor = true;
             Pinjam.Click += Pinjam_Click;
             // 
-            // kembaliBTN
-            // 
-            kembaliBTN.Location = new Point(668, 373);
-            kembaliBTN.Name = "kembaliBTN";
-            kembaliBTN.Size = new Size(94, 29);
-            kembaliBTN.TabIndex = 2;
-            kembaliBTN.Text = "Kembali";
-            kembaliBTN.UseVisualStyleBackColor = true;
-            kembaliBTN.Click += kembaliBTN_Click;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -118,16 +108,26 @@
             label1.TabIndex = 3;
             label1.Text = "PerpusGO";
             // 
-            // Peminjaman
+            // Back
+            // 
+            Back.Location = new Point(651, 373);
+            Back.Name = "Back";
+            Back.Size = new Size(94, 29);
+            Back.TabIndex = 4;
+            Back.Text = "Back";
+            Back.UseVisualStyleBackColor = true;
+            Back.Click += Back_Click_1;
+            // 
+            // PeminjamanBuku
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(Back);
             Controls.Add(label1);
-            Controls.Add(kembaliBTN);
             Controls.Add(Pinjam);
             Controls.Add(dataGridView1);
-            Name = "Peminjaman";
+            Name = "PeminjamanBuku";
             Text = "Form2";
             Load += Peminjaman_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -144,7 +144,7 @@
         private DataGridViewTextBoxColumn TahunTerbit;
         private DataGridViewTextBoxColumn Stok;
         private Button Pinjam;
-        private Button kembaliBTN;
         private Label label1;
+        private Button Back;
     }
 }

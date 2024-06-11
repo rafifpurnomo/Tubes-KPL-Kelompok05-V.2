@@ -16,19 +16,29 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
         public MenuPengguna()
         {
             InitializeComponent();
-            namaUserDisplay.Text = UserSession.namaUser;
+            label2.Text = UserSession.namaUser;
+        }
+        public static PeminjamanBuku peminjamanBuku;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.SetVisibleCore(false);
+            PeminjamanBuku peminjamanBuku = new PeminjamanBuku(this);
+            peminjamanBuku.Show();
         }
 
-        private void pinjamBukuBTN_Click(object sender, EventArgs e)
+        private void daftarPinjaman_Click(object sender, EventArgs e)
         {
-            Peminjaman peminjaman = new Peminjaman();   
-            peminjaman.Visible = true;
+            this.SetVisibleCore(false);
+            DaftarPeminjamanPengguna daftarPeminjamanPengguna = new DaftarPeminjamanPengguna(this);
+            daftarPeminjamanPengguna.Show();
         }
 
-        private void logoutBTN_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            LoginPage loginPage = new LoginPage(); 
-            loginPage.Visible = true;
+            UserSession.clearSession();
+            LoginPage newLogin = new LoginPage();
+            newLogin.Visible = true;
             this.Dispose();
         }
     }

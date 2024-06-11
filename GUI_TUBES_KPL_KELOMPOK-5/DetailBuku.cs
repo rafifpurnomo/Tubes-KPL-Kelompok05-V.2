@@ -6,9 +6,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
     public partial class DetailBuku : Form
     {
         private Buku buku;
-        private Peminjaman dataPeminjaman;
-        private string filePathDataPeminjaman = "Data\\DataPeminjaman.json";
-        private string filePathDataBuku = "Data\\DataBuku.json";
+
         public DetailBuku(Buku buku)
         {
             InitializeComponent();
@@ -63,11 +61,6 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
             this.Dispose();
-        }
-
-        private void DetailBuku_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void Pinjam_Click(object sender, EventArgs e)

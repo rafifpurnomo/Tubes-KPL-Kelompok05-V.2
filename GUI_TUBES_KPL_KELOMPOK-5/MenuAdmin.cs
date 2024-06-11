@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MAIN_TUBES_KPL_KELOMPOK_5;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,25 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
         public MenuAdmin()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.SetVisibleCore(false);
+            new DaftarBuku().Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            UserSession.clearSession();
+            LoginPage loginPage = new LoginPage();  
+            loginPage.Visible = true;
+            this.Dispose();
         }
     }
 }

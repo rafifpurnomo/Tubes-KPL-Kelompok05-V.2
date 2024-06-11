@@ -39,6 +39,7 @@
             BTNhapus = new Button();
             BTNtambah = new Button();
             button1 = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -60,7 +61,7 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { KodeBuku, JudulBuku, SinopsisBuku, PenulisBuku, TahunTerbitBuku, StokBuku });
             dataGridView1.Location = new Point(103, 201);
-            dataGridView1.Margin = new Padding(2, 2, 2, 2);
+            dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 82;
             dataGridView1.Size = new Size(790, 312);
@@ -112,7 +113,7 @@
             // BTNhapus
             // 
             BTNhapus.Location = new Point(801, 524);
-            BTNhapus.Margin = new Padding(2, 2, 2, 2);
+            BTNhapus.Margin = new Padding(2);
             BTNhapus.Name = "BTNhapus";
             BTNhapus.Size = new Size(92, 29);
             BTNhapus.TabIndex = 2;
@@ -122,7 +123,7 @@
             // BTNtambah
             // 
             BTNtambah.Location = new Point(705, 524);
-            BTNtambah.Margin = new Padding(2, 2, 2, 2);
+            BTNtambah.Margin = new Padding(2);
             BTNtambah.Name = "BTNtambah";
             BTNtambah.Size = new Size(92, 29);
             BTNtambah.TabIndex = 3;
@@ -133,24 +134,36 @@
             // button1
             // 
             button1.Location = new Point(609, 524);
-            button1.Margin = new Padding(2, 2, 2, 2);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(92, 29);
             button1.TabIndex = 4;
             button1.Text = "Refresh";
             button1.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            button2.Location = new Point(11, 11);
+            button2.Margin = new Padding(2);
+            button2.Name = "button2";
+            button2.Size = new Size(92, 29);
+            button2.TabIndex = 5;
+            button2.Text = "kembali";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // DaftarBuku
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(996, 659);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(BTNtambah);
             Controls.Add(BTNhapus);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "DaftarBuku";
             Text = "DaftarBuku";
             Load += DaftarBuku_Load;
@@ -172,5 +185,6 @@
         private Button BTNhapus;
         private Button BTNtambah;
         private Button button1;
+        private Button button2;
     }
 }
