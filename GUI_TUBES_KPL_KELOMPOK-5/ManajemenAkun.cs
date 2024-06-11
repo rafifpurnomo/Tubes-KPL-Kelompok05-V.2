@@ -30,8 +30,9 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 
         private void button3_Click(object sender, EventArgs e)
         {
-            TambahAnggotaPerpus tambahAnggotaPerpus = new TambahAnggotaPerpus();
+            tambahAnggotaPerpus tambahAnggotaPerpus = new tambahAnggotaPerpus();
             tambahAnggotaPerpus.Visible = true;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

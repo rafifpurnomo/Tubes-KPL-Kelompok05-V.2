@@ -9,7 +9,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 {
     public partial class PeminjamanBuku : Form
     {
-        public string filePathDataBuku = "C:\\Kuliah\\semester 4\\Konstruksi Perangkat Lunak\\Tubes\\Kelompok_5\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataBuku.json";
+        public string filePathDataBuku = "C:\\Users\\Rafif Purnomo\\OneDrive\\Documents\\Coding\\C#\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataPeminjaman.json";
         public PeminjamanBuku(MenuPengguna menuPengguna)
         {
             InitializeComponent();
