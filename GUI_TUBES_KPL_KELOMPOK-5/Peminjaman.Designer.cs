@@ -44,7 +44,7 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { KodeBuku, Judul, Penulis, TahunTerbit, Stok });
             dataGridView1.Location = new Point(110, 171);
-            dataGridView1.Margin = new Padding(5, 5, 5, 5);
+            dataGridView1.Margin = new Padding(5);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(1100, 301);
@@ -89,7 +89,7 @@
             // Pinjam
             // 
             Pinjam.Location = new Point(814, 600);
-            Pinjam.Margin = new Padding(5, 5, 5, 5);
+            Pinjam.Margin = new Padding(5);
             Pinjam.Name = "Pinjam";
             Pinjam.Size = new Size(153, 46);
             Pinjam.TabIndex = 1;
@@ -99,7 +99,7 @@
             // Keluar
             // 
             Keluar.Location = new Point(1086, 597);
-            Keluar.Margin = new Padding(5, 5, 5, 5);
+            Keluar.Margin = new Padding(5);
             Keluar.Name = "Keluar";
             Keluar.Size = new Size(153, 46);
             Keluar.TabIndex = 2;
@@ -114,9 +114,10 @@
             Controls.Add(Keluar);
             Controls.Add(Pinjam);
             Controls.Add(dataGridView1);
-            Margin = new Padding(5, 5, 5, 5);
+            Margin = new Padding(5);
             Name = "Peminjaman";
             Text = "Form2";
+            Load += Peminjaman_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }

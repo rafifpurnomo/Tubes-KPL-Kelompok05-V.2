@@ -1,12 +1,12 @@
 [
   {
     "kodeBuku": "BK001",
-    "Judul": "Harry Potter and the Philosopher's Stone",
+    "Judul": "Harry Potter and the Philosopher Stone",
     "Sinopsis": "Harry Potter, seorang anak yatim piatu yang menemukan bahwa ia adalah seorang penyihir dan diterima di Sekolah Sihir Hogwarts.",
     "Penulis": "J.K. Rowling",
     "TahunTerbit": 1997,
     "stok": 8,
-    "jumlahBuku": 10
+    "jumlahBuku": 0
   },
   {
     "kodeBuku": "BK002",
@@ -15,7 +15,7 @@
     "Penulis": "J.R.R. Tolkien",
     "TahunTerbit": 1937,
     "stok": 10,
-    "jumlahBuku": 10
+    "jumlahBuku": 0
   },
   {
     "kodeBuku": "BK003",
@@ -24,7 +24,7 @@
     "Penulis": "Harper Lee",
     "TahunTerbit": 1960,
     "stok": 4,
-    "jumlahBuku": 10
+    "jumlahBuku": 0
   },
   {
     "kodeBuku": "string",
@@ -34,5 +34,50 @@
     "TahunTerbit": 0,
     "stok": 0,
     "jumlahBuku": 0
+  },
+  {
+    "kodeBuku": "KB0101",
+    "Judul": "Belva Sang Pria Idaman",
+    "Sinopsis": "awlakwakowkokaokwaokwoka",
+    "Penulis": "belva",
+    "TahunTerbit": 2011,
+    "stok": 3,
+    "jumlahBuku": 0
+  },
+  {
+    "kodeBuku": "18291",
+    "Judul": "kontolodon pada zamann dino",
+    "Sinopsis": "dghasudgasudgiadaw",
+    "Penulis": "naopal",
+    "TahunTerbit": 1670,
+    "stok": 2,
+    "jumlahBuku": 0
+  },
+  {
+    "kodeBuku": "KKB00911",
+    "Judul": "AKU AKU AKU",
+    "Sinopsis": "DJASHCJACASHCIQWHCOQ",
+    "Penulis": "ssaha",
+    "TahunTerbit": 2342,
+    "stok": 5,
+    "jumlahBuku": 0
+  },
+  {
+    "kodeBuku": "2313213",
+    "Judul": "sfsfsdfs",
+    "Sinopsis": "wwfwefwegewgewgw",
+    "Penulis": "wrfwqfw",
+    "TahunTerbit": 43224,
+    "stok": 34,
+    "jumlahBuku": 34
+  },
+  {
+    "kodeBuku": "KB004",
+    "Judul": "Flying Dragon",
+    "Sinopsis": "sajsoajodjhaodcwa",
+    "Penulis": "belvanaufal",
+    "TahunTerbit": 3230,
+    "stok": 8,
+    "jumlahBuku": 8
   }
 ]

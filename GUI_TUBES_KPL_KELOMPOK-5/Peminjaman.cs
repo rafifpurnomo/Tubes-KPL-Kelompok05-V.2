@@ -17,7 +17,13 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
             InitializeComponent();
         }
 
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Peminjaman_Load(object sender, EventArgs e)
         {
 
         }

@@ -1,6 +1,6 @@
 ﻿namespace GUI_TUBES_KPL_KELOMPOK_5
 {
-    partial class TambahBuku
+    partial class EditBuku
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            PerpusGO = new Label();
+            label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -41,46 +41,42 @@
             textBox4 = new TextBox();
             textBox5 = new TextBox();
             textBox6 = new TextBox();
-            btnTambah = new Button();
+            btnSave = new Button();
             btnCancel = new Button();
             SuspendLayout();
             // 
-            // PerpusGO
+            // label1
             // 
-            PerpusGO.AutoSize = true;
-            PerpusGO.Font = new Font("Segoe UI Semibold", 40.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            PerpusGO.ForeColor = SystemColors.ActiveCaption;
-            PerpusGO.Location = new Point(568, 52);
-            PerpusGO.Name = "PerpusGO";
-            PerpusGO.Size = new Size(544, 142);
-            PerpusGO.TabIndex = 0;
-            PerpusGO.Text = "PerpusGO";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 40.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ActiveCaption;
+            label1.Location = new Point(568, 52);
+            label1.Name = "label1";
+            label1.Size = new Size(544, 142);
+            label1.TabIndex = 0;
+            label1.Text = "PerpusGO";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label2.Location = new Point(380, 280);
             label2.Name = "label2";
-            label2.Size = new Size(70, 32);
+            label2.Size = new Size(68, 32);
             label2.TabIndex = 1;
             label2.Text = "Kode";
-            label2.Click += label2_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label3.Location = new Point(380, 380);
             label3.Name = "label3";
-            label3.Size = new Size(72, 32);
+            label3.Size = new Size(71, 32);
             label3.TabIndex = 2;
             label3.Text = "Judul";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label4.Location = new Point(380, 480);
             label4.Name = "label4";
             label4.Size = new Size(101, 32);
@@ -90,30 +86,27 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label5.Location = new Point(380, 580);
             label5.Name = "label5";
-            label5.Size = new Size(90, 32);
+            label5.Size = new Size(89, 32);
             label5.TabIndex = 4;
             label5.Text = "Penulis";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label6.Location = new Point(380, 680);
             label6.Name = "label6";
-            label6.Size = new Size(149, 32);
+            label6.Size = new Size(145, 32);
             label6.TabIndex = 5;
             label6.Text = "Tahun Terbit";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label7.Location = new Point(380, 780);
             label7.Name = "label7";
-            label7.Size = new Size(62, 32);
+            label7.Size = new Size(60, 32);
             label7.TabIndex = 6;
             label7.Text = "Stok";
             // 
@@ -159,15 +152,15 @@
             textBox6.Size = new Size(544, 39);
             textBox6.TabIndex = 12;
             // 
-            // btnTambah
+            // btnSave
             // 
-            btnTambah.Location = new Point(962, 880);
-            btnTambah.Name = "btnTambah";
-            btnTambah.Size = new Size(150, 46);
-            btnTambah.TabIndex = 13;
-            btnTambah.Text = "Tambah";
-            btnTambah.UseVisualStyleBackColor = true;
-            btnTambah.Click += btnTambah_Click;
+            btnSave.Location = new Point(962, 880);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(150, 46);
+            btnSave.TabIndex = 13;
+            btnSave.Text = "Simpan";
+            btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -177,16 +170,15 @@
             btnCancel.TabIndex = 14;
             btnCancel.Text = "Kembali";
             btnCancel.UseVisualStyleBackColor = true;
-            btnCancel.Click += btnCancel_Click;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // TambahBuku
+            // EditBuku
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1619, 1079);
             Controls.Add(btnCancel);
-            Controls.Add(btnTambah);
+            Controls.Add(btnSave);
             Controls.Add(textBox6);
             Controls.Add(textBox5);
             Controls.Add(textBox4);
@@ -199,17 +191,16 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(PerpusGO);
-            Name = "TambahBuku";
-            Text = "TambahBuku";
-            Load += TambahBuku_Load;
+            Controls.Add(label1);
+            Name = "EditBuku";
+            Text = "EditBuku";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label PerpusGO;
+        private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
@@ -222,7 +213,7 @@
         private TextBox textBox4;
         private TextBox textBox5;
         private TextBox textBox6;
-        private Button btnTambah;
+        private Button btnSave;
         private Button btnCancel;
     }
 }

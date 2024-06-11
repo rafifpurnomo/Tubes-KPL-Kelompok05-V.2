@@ -11,7 +11,8 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new LoginPage());
+            
+            Application.Run(new DaftarBuku());
         }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            JUDUL = new Label();
             dataGridView1 = new DataGridView();
             KodeBuku = new DataGridViewTextBoxColumn();
             JudulBuku = new DataGridViewTextBoxColumn();
@@ -38,21 +38,20 @@
             StokBuku = new DataGridViewTextBoxColumn();
             BTNhapus = new Button();
             BTNtambah = new Button();
-            button1 = new Button();
+            BTNedit = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // JUDUL
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 40.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ActiveCaption;
-            label1.Location = new Point(596, 52);
-            label1.Name = "label1";
-            label1.Size = new Size(527, 142);
-            label1.TabIndex = 0;
-            label1.Text = "PerpusGo";
-            label1.Click += label1_Click;
+            JUDUL.AutoSize = true;
+            JUDUL.Font = new Font("Segoe UI Semibold", 40.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            JUDUL.ForeColor = SystemColors.ActiveCaption;
+            JUDUL.Location = new Point(568, 52);
+            JUDUL.Name = "JUDUL";
+            JUDUL.Size = new Size(544, 142);
+            JUDUL.TabIndex = 0;
+            JUDUL.Text = "PerpusGO";
             // 
             // dataGridView1
             // 
@@ -61,7 +60,7 @@
             dataGridView1.Location = new Point(167, 322);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 82;
-            dataGridView1.Size = new Size(1284, 500);
+            dataGridView1.Size = new Size(1284, 413);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -115,6 +114,7 @@
             BTNhapus.TabIndex = 2;
             BTNhapus.Text = "Hapus";
             BTNhapus.UseVisualStyleBackColor = true;
+            BTNhapus.Click += BTNhapus_Click;
             // 
             // BTNtambah
             // 
@@ -126,27 +126,29 @@
             BTNtambah.UseVisualStyleBackColor = true;
             BTNtambah.Click += BTNtambah_Click;
             // 
-            // button1
+            // BTNedit
             // 
-            button1.Location = new Point(989, 838);
-            button1.Name = "button1";
-            button1.Size = new Size(150, 46);
-            button1.TabIndex = 4;
-            button1.Text = "Refresh";
-            button1.UseVisualStyleBackColor = true;
+            BTNedit.Location = new Point(989, 838);
+            BTNedit.Name = "BTNedit";
+            BTNedit.Size = new Size(150, 46);
+            BTNedit.TabIndex = 5;
+            BTNedit.Text = "Edit";
+            BTNedit.UseVisualStyleBackColor = true;
+            BTNedit.Click += BTNedit_Click;
             // 
             // DaftarBuku
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1619, 1079);
-            Controls.Add(button1);
+            Controls.Add(BTNedit);
             Controls.Add(BTNtambah);
             Controls.Add(BTNhapus);
             Controls.Add(dataGridView1);
-            Controls.Add(label1);
+            Controls.Add(JUDUL);
             Name = "DaftarBuku";
             Text = "DaftarBuku";
+            Load += DaftarBuku_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -154,7 +156,7 @@
 
         #endregion
 
-        private Label label1;
+        private Label JUDUL;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn KodeBuku;
         private DataGridViewTextBoxColumn JudulBuku;
@@ -164,6 +166,6 @@
         private DataGridViewTextBoxColumn StokBuku;
         private Button BTNhapus;
         private Button BTNtambah;
-        private Button button1;
+        private Button BTNedit;
     }
 }
