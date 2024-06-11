@@ -25,14 +25,5 @@
     "TahunTerbit": 1960,
     "stok": 4,
     "jumlahBuku": 10
-  },
-  {
-    "kodeBuku": "BK010",
-    "Judul": "test",
-    "Sinopsis": "test",
-    "Penulis": "test",
-    "TahunTerbit": 1234,
-    "stok": 1,
-    "jumlahBuku": 1
   }
 ]
