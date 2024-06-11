@@ -47,9 +47,10 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 40.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ActiveCaption;
-            label1.Location = new Point(596, 52);
+            label1.Location = new Point(367, 32);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(527, 142);
+            label1.Size = new Size(331, 89);
             label1.TabIndex = 0;
             label1.Text = "PerpusGo";
             label1.Click += label1_Click;
@@ -58,10 +59,11 @@
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { KodeBuku, JudulBuku, SinopsisBuku, PenulisBuku, TahunTerbitBuku, StokBuku });
-            dataGridView1.Location = new Point(167, 322);
+            dataGridView1.Location = new Point(103, 201);
+            dataGridView1.Margin = new Padding(2, 2, 2, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 82;
-            dataGridView1.Size = new Size(1284, 500);
+            dataGridView1.Size = new Size(790, 312);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -109,18 +111,20 @@
             // 
             // BTNhapus
             // 
-            BTNhapus.Location = new Point(1301, 838);
+            BTNhapus.Location = new Point(801, 524);
+            BTNhapus.Margin = new Padding(2, 2, 2, 2);
             BTNhapus.Name = "BTNhapus";
-            BTNhapus.Size = new Size(150, 46);
+            BTNhapus.Size = new Size(92, 29);
             BTNhapus.TabIndex = 2;
             BTNhapus.Text = "Hapus";
             BTNhapus.UseVisualStyleBackColor = true;
             // 
             // BTNtambah
             // 
-            BTNtambah.Location = new Point(1145, 838);
+            BTNtambah.Location = new Point(705, 524);
+            BTNtambah.Margin = new Padding(2, 2, 2, 2);
             BTNtambah.Name = "BTNtambah";
-            BTNtambah.Size = new Size(150, 46);
+            BTNtambah.Size = new Size(92, 29);
             BTNtambah.TabIndex = 3;
             BTNtambah.Text = "Tambah";
             BTNtambah.UseVisualStyleBackColor = true;
@@ -128,25 +132,28 @@
             // 
             // button1
             // 
-            button1.Location = new Point(989, 838);
+            button1.Location = new Point(609, 524);
+            button1.Margin = new Padding(2, 2, 2, 2);
             button1.Name = "button1";
-            button1.Size = new Size(150, 46);
+            button1.Size = new Size(92, 29);
             button1.TabIndex = 4;
             button1.Text = "Refresh";
             button1.UseVisualStyleBackColor = true;
             // 
             // DaftarBuku
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1619, 1079);
+            ClientSize = new Size(996, 659);
             Controls.Add(button1);
             Controls.Add(BTNtambah);
             Controls.Add(BTNhapus);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "DaftarBuku";
             Text = "DaftarBuku";
+            Load += DaftarBuku_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

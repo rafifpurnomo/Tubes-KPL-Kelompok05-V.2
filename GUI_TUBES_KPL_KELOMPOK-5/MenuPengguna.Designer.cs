@@ -38,40 +38,39 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(41, 23);
+            label1.Location = new Point(30, 25);
             label1.Name = "label1";
             label1.Size = new Size(184, 31);
             label1.TabIndex = 0;
             label1.Text = "Selamat Datang";
-            label1.Click += label1_Click;
             // 
             // namaUserDisplay
             // 
             namaUserDisplay.AutoSize = true;
             namaUserDisplay.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            namaUserDisplay.Location = new Point(231, 23);
+            namaUserDisplay.Location = new Point(220, 25);
             namaUserDisplay.Name = "namaUserDisplay";
-            namaUserDisplay.Size = new Size(114, 31);
+            namaUserDisplay.Size = new Size(117, 31);
             namaUserDisplay.TabIndex = 1;
-            namaUserDisplay.Text = "namauser";
+            namaUserDisplay.Text = "namaUser";
             // 
             // pinjamBukuBTN
             // 
-            pinjamBukuBTN.Location = new Point(41, 76);
+            pinjamBukuBTN.Location = new Point(30, 86);
             pinjamBukuBTN.Name = "pinjamBukuBTN";
-            pinjamBukuBTN.Size = new Size(129, 29);
+            pinjamBukuBTN.Size = new Size(126, 29);
             pinjamBukuBTN.TabIndex = 2;
-            pinjamBukuBTN.Text = "pinjam buku";
+            pinjamBukuBTN.Text = "Pinjam Buku";
             pinjamBukuBTN.UseVisualStyleBackColor = true;
             pinjamBukuBTN.Click += pinjamBukuBTN_Click;
             // 
             // logoutBTN
             // 
-            logoutBTN.Location = new Point(41, 131);
+            logoutBTN.Location = new Point(30, 134);
             logoutBTN.Name = "logoutBTN";
-            logoutBTN.Size = new Size(129, 29);
+            logoutBTN.Size = new Size(126, 29);
             logoutBTN.TabIndex = 3;
-            logoutBTN.Text = "log out";
+            logoutBTN.Text = "Log Out";
             logoutBTN.UseVisualStyleBackColor = true;
             logoutBTN.Click += logoutBTN_Click;
             // 
@@ -86,7 +85,6 @@
             Controls.Add(label1);
             Name = "MenuPengguna";
             Text = "MenuPengguna";
-            Load += MenuPengguna_Load;
             ResumeLayout(false);
             PerformLayout();
         }

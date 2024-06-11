@@ -9,6 +9,7 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
     public class Akun
     {
         public string namaUser { get; set; }
+
         public string No_Anggota { get; set; }
         public string password { get; set; }
 

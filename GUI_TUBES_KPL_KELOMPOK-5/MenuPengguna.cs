@@ -16,30 +16,19 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
         public MenuPengguna()
         {
             InitializeComponent();
-            namaUserDisplay.Text = SesiLogin.namaUser;
-        }
-
-        private void MenuPengguna_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            namaUserDisplay.Text = UserSession.namaUser;
         }
 
         private void pinjamBukuBTN_Click(object sender, EventArgs e)
         {
-            Peminjaman pinjamBuku = new Peminjaman();
-            pinjamBuku.Visible = true;
+            Peminjaman peminjaman = new Peminjaman();   
+            peminjaman.Visible = true;
         }
 
         private void logoutBTN_Click(object sender, EventArgs e)
         {
-            SesiLogin.clearSession();
-            LoginPage loginPage = new LoginPage();
-            loginPage.Show();
+            LoginPage loginPage = new LoginPage(); 
+            loginPage.Visible = true;
             this.Dispose();
         }
     }

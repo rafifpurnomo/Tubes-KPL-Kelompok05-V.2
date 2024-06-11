@@ -32,5 +32,10 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
             TambahBuku formTambahBuku = new TambahBuku();
             formTambahBuku.ShowDialog();
         }
+
+        private void DaftarBuku_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

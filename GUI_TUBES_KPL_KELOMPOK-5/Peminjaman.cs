@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 using System.Windows.Forms;
+using MAIN_TUBES_KPL_KELOMPOK_5;
 
 namespace GUI_TUBES_KPL_KELOMPOK_5
 {
     public partial class Peminjaman : Form
     {
+        private string fileDataBuku = "Data\\DataBuku.json";
         public Peminjaman()
         {
             InitializeComponent();
+            dataGridView1.ReadOnly = true;
         }
 
         private void Peminjaman_Load(object sender, EventArgs e)
@@ -20,39 +23,65 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 
         private void PopulateDataGridView()
         {
-            List<Buku> daftarBuku = ReadJsonFile("C:\\Users\\Rafif Purnomo\\OneDrive\\Documents\\Coding\\C#\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataBuku.json");
+            List<Buku> daftarBuku = ReadJsonFile(fileDataBuku);
 
             foreach (var buku in daftarBuku)
             {
-                tableDaftarBuku.Rows.Add(buku.kodeBuku, buku.Judul, buku.Penulis, buku.TahunTerbit, buku.stok);
+                dataGridView1.Rows.Add(buku.kodeBuku, buku.Judul, buku.Penulis, buku.TahunTerbit, buku.stok);
             }
         }
 
         private List<Buku> ReadJsonFile(string filePath)
         {
-            string json;
-            using (StreamReader reader = new StreamReader(filePath))
+            try
             {
-                json = reader.ReadToEnd();
+                string json;
+                using (StreamReader reader = new StreamReader(filePath))
+                {
+                    json = reader.ReadToEnd();
+                }
+
+                List<Buku> daftarBuku = JsonSerializer.Deserialize<List<Buku>>(json);
+                return daftarBuku;
             }
-
-            List<Buku> daftarBuku = JsonSerializer.Deserialize<List<Buku>>(json);
-
-            return daftarBuku;
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error reading JSON file: {ex.Message}");
+                return new List<Buku>();
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Implement your logic here if needed
+            List<Buku> daftarBuku = ReadJsonFile(fileDataBuku);
+
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                string kodeBuku = row.Cells[0].Value.ToString();
+                Buku buku = searchBookByKode(kodeBuku, daftarBuku);
+                if (buku != null)
+                {
+                    new DetailBuku(buku).ShowDialog();
+                }
+            }
         }
 
-        private class Buku
+        public Buku searchBookByKode(string kode, List<Buku> daftarBuku)
         {
-            public string kodeBuku { get; set; }
-            public string Judul { get; set; }
-            public string Penulis { get; set; }
-            public int TahunTerbit { get; set; }
-            public int stok { get; set; }
+            for (int i = 0; i < daftarBuku.Count; i++)
+            {
+                if (daftarBuku[i].kodeBuku == kode)
+                {
+                    return daftarBuku[i];
+                }
+            }
+            return null;
+        }
+
+        private void Pinjam_Click(object sender, EventArgs e)
+        {
+            // Implement your logic here if needed
         }
 
         private void kembaliBTN_Click(object sender, EventArgs e)

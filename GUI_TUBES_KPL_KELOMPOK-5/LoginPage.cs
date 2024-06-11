@@ -13,7 +13,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
             InitializeComponent();
 
             dataAkun = new List<Akun>();
-            string filePath = "C:\\Users\\Rafif Purnomo\\OneDrive\\Documents\\Coding\\C#\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataAkun.json";
+            string filePath = Path.Combine(Application.StartupPath, "Data", "DataAkun.json"); ;
             readAkunJson(filePath);
         }
 
@@ -64,39 +64,47 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
         {
             string noAnggota = usernameInput.Text;
             string password = passInput.Text;
-            
+
             try
             {
                 Akun userLogin = validateLogin(noAnggota, password);
                 if (userLogin != null)
                 {
-                    SesiLogin.namaUser = userLogin.namaUser;
-                    SesiLogin.No_Anggota = userLogin.No_Anggota;   
-                    SesiLogin.password = userLogin.password;
-                    SesiLogin.Role = userLogin.Role;
-                    SesiLogin.no_telpon = userLogin.no_Telpon;
-                    SesiLogin.status = (int) userLogin.status;
+                    UserSession.namaUser = userLogin.namaUser;
+                    UserSession.No_Anggota = userLogin.No_Anggota;
+                    UserSession.password = userLogin.password;
+                    UserSession.Role = userLogin.Role;
+                    UserSession.no_telpon = userLogin.no_Telpon;
+                    UserSession.status = (int)userLogin.status;
 
-                    if (SesiLogin.Role.Equals("Admin"))
+                    if (UserSession.Role.Equals("Admin"))
                     {
                         MenuAdmin menuadmin = new MenuAdmin();
                         menuadmin.Visible = true;
                         this.Visible = false;
-                    } else if (SesiLogin.Role.Equals("Anggota Perpustakaan"))
+                    }
+                    else if (UserSession.Role.Equals("Anggota Perpustakaan"))
                     {
                         MenuPengguna menuPengguna = new MenuPengguna();
                         menuPengguna.Visible = true;
                         this.Visible = false;
                     }
-                } else
+                }
+                else
                 {
                     MessageBox.Show("no anggota atau password salah");
                 }
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

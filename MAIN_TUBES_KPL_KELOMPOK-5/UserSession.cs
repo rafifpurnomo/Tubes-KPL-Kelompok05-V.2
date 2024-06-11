@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MAIN_TUBES_KPL_KELOMPOK_5
 {
-    public class SesiLogin
+    public class UserSession
     {
         public static string namaUser { get; set; }
         public static string No_Anggota { get; set; }

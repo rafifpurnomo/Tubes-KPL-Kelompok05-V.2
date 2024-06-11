@@ -28,30 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             LoginBTN = new Button();
             usernameInput = new TextBox();
             passInput = new TextBox();
-            label4 = new Label();
+            label1 = new Label();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ControlText;
-            label1.Location = new Point(243, 41);
-            label1.Name = "label1";
-            label1.Size = new Size(0, 35);
-            label1.TabIndex = 0;
-            label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(243, 135);
+            label2.Location = new Point(243, 141);
             label2.Name = "label2";
             label2.Size = new Size(91, 20);
             label2.TabIndex = 1;
@@ -61,7 +49,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(243, 208);
+            label3.Location = new Point(243, 214);
             label3.Name = "label3";
             label3.Size = new Size(70, 20);
             label3.TabIndex = 2;
@@ -69,7 +57,7 @@
             // 
             // LoginBTN
             // 
-            LoginBTN.Location = new Point(338, 286);
+            LoginBTN.Location = new Point(338, 294);
             LoginBTN.Name = "LoginBTN";
             LoginBTN.Size = new Size(94, 29);
             LoginBTN.TabIndex = 3;
@@ -79,7 +67,7 @@
             // 
             // usernameInput
             // 
-            usernameInput.Location = new Point(243, 158);
+            usernameInput.Location = new Point(243, 164);
             usernameInput.Name = "usernameInput";
             usernameInput.Size = new Size(189, 27);
             usernameInput.TabIndex = 5;
@@ -87,49 +75,47 @@
             // 
             // passInput
             // 
-            passInput.Location = new Point(243, 231);
+            passInput.Location = new Point(243, 237);
             passInput.Name = "passInput";
             passInput.Size = new Size(189, 27);
             passInput.TabIndex = 6;
             // 
-            // label4
+            // label1
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = SystemColors.ActiveCaption;
-            label4.Location = new Point(243, 50);
-            label4.Margin = new Padding(2, 0, 2, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(179, 46);
-            label4.TabIndex = 7;
-            label4.Text = "PerpusGO";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 40.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ActiveCaption;
+            label1.Location = new Point(199, 24);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(331, 89);
+            label1.TabIndex = 7;
+            label1.Text = "PerpusGo";
             // 
             // LoginPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label4);
+            Controls.Add(label1);
             Controls.Add(passInput);
             Controls.Add(usernameInput);
             Controls.Add(LoginBTN);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
             Name = "LoginPage";
             Text = "loginPage";
+            Load += LoginPage_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private Label label2;
         private Label label3;
         private Button LoginBTN;
         private TextBox usernameInput;
         private TextBox passInput;
-        private Label label4;
+        private Label label1;
     }
 }
