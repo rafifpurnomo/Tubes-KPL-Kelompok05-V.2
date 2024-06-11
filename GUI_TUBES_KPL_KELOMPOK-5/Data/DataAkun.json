@@ -2,10 +2,10 @@
   {
     "namaUser": "Ghaziveda Belvanaufal",
     "No_Anggota": "002",
-    "password" :  "belva",
-    "no_Telpon": "1302220011",
+    "password": "belva",
     "Role": "Anggota Perpustakaan",
-    "status": 0 
+    "no_Telpon": "1302220011",
+    "status": 0
   },
   {
     "namaUser": "Daffa Adrianto",

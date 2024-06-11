@@ -9,13 +9,17 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 {
     public partial class PeminjamanBuku : Form
     {
+        public string filePathDataBuku = "C:\\Kuliah\\semester 4\\Konstruksi Perangkat Lunak\\Tubes\\Kelompok_5\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataBuku.json";
         public PeminjamanBuku(MenuPengguna menuPengguna)
         {
             InitializeComponent();
             this.menuPengguna = menuPengguna;
+            dataGridView1.ReadOnly = true;
+            this.akun = akun;
         }
 
         MenuPengguna menuPengguna;
+        Akun akun;
 
         private void Peminjaman_Load(object sender, EventArgs e)
         {
@@ -24,7 +28,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 
         private void PopulateDataGridView()
         {
-            List<Buku> daftarBuku = ReadJsonFile("C:\\Kuliah\\semester 4\\Konstruksi Perangkat Lunak\\Tubes\\Kelompok_5\\Tubes-KPL-Kelompok05-V.2\\API_TUBES_KPL_KELOMPOK-05\\Data\\DataBuku.json");
+            List<Buku> daftarBuku = ReadJsonFile(filePathDataBuku);
 
             foreach (var buku in daftarBuku)
             {
@@ -54,7 +58,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            List<Buku> daftarBuku = ReadJsonFile("C:\\Kuliah\\semester 4\\Konstruksi Perangkat Lunak\\Tubes\\Kelompok_5\\Tubes-KPL-Kelompok05-V.2\\API_TUBES_KPL_KELOMPOK-05\\Data\\DataBuku.json");
+            List<Buku> daftarBuku = ReadJsonFile(filePathDataBuku);
 
             if (e.RowIndex >= 0)
             {
@@ -80,15 +84,18 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
             return null;
         }
 
-        private void Pinjam_Click(object sender, EventArgs e)
-        {
-            // Implement your logic here if needed
-        }
+
 
         private void Back_Click_1(object sender, EventArgs e)
         {
             this.Close();
             menuPengguna.Show();
+        }
+
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            PopulateDataGridView();
         }
     }
 }

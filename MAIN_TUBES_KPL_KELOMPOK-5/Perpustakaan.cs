@@ -20,7 +20,7 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
         }
 
         public const string JsonPathBuku = "C:\\Kuliah\\semester 4\\Konstruksi Perangkat Lunak\\Tubes\\Kelompok_5\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataBuku.json";
-        public const string JsonPathPeminjaman  = "";
+        public const string JsonPathPeminjaman  = "C:\\Kuliah\\semester 4\\Konstruksi Perangkat Lunak\\Tubes\\Kelompok_5\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataPeminjaman.json";
         public const string JsonPathAkun = "C:\\Kuliah\\semester 4\\Konstruksi Perangkat Lunak\\Tubes\\Kelompok_5\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataAkun.json";
 
         private List<Buku> buku = new List<Buku>();
@@ -90,7 +90,7 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
                 string peminjaman = StringLibrary.KonversiDateKeString(sekarang);
                 string deadlinePengembalian = StringLibrary.KonversiDateKeString(sekarang.AddDays(configManager.BatasWaktuPeminjaman));
 
-                Peminjaman peminjamanBaru = new Peminjaman(Peminjaman.ID_count.ToString(), rakBuku[idx_buku].Judul, pengguna, peminjaman, deadlinePengembalian);
+                Peminjaman peminjamanBaru = new Peminjaman(rakBuku[idx_buku].Judul, pengguna, peminjaman, deadlinePengembalian);
                 DaftarPeminjaman.Add(peminjamanBaru);
                 Console.WriteLine("Berhasil melakukan peminjaman");
                 rakBuku[idx_buku].stok--;
@@ -182,7 +182,7 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
             }
         }
 
-        public T ReadJsonFile<T>(string filePath, string flag)
+        public static T ReadJsonFile<T>(string filePath, string flag)
         {
             try
             {

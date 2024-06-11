@@ -51,7 +51,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(124, 169);
+            label2.Location = new Point(271, 155);
             label2.Name = "label2";
             label2.Size = new Size(91, 20);
             label2.TabIndex = 1;
@@ -61,7 +61,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(124, 242);
+            label3.Location = new Point(271, 228);
             label3.Name = "label3";
             label3.Size = new Size(70, 20);
             label3.TabIndex = 2;
@@ -69,7 +69,7 @@
             // 
             // LoginBTN
             // 
-            LoginBTN.Location = new Point(409, 233);
+            LoginBTN.Location = new Point(366, 301);
             LoginBTN.Name = "LoginBTN";
             LoginBTN.Size = new Size(94, 29);
             LoginBTN.TabIndex = 3;
@@ -79,7 +79,7 @@
             // 
             // usernameInput
             // 
-            usernameInput.Location = new Point(124, 192);
+            usernameInput.Location = new Point(271, 178);
             usernameInput.Name = "usernameInput";
             usernameInput.Size = new Size(189, 27);
             usernameInput.TabIndex = 5;
@@ -87,7 +87,7 @@
             // 
             // passInput
             // 
-            passInput.Location = new Point(124, 265);
+            passInput.Location = new Point(271, 251);
             passInput.Name = "passInput";
             passInput.Size = new Size(189, 27);
             passInput.TabIndex = 6;

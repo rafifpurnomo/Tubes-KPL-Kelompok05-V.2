@@ -34,7 +34,7 @@
             Penulis = new DataGridViewTextBoxColumn();
             TahunTerbit = new DataGridViewTextBoxColumn();
             Stok = new DataGridViewTextBoxColumn();
-            Pinjam = new Button();
+            Refresh = new Button();
             label1 = new Label();
             Back = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -86,15 +86,15 @@
             Stok.Name = "Stok";
             Stok.Width = 125;
             // 
-            // Pinjam
+            // Refresh
             // 
-            Pinjam.Location = new Point(521, 373);
-            Pinjam.Name = "Pinjam";
-            Pinjam.Size = new Size(94, 29);
-            Pinjam.TabIndex = 1;
-            Pinjam.Text = "Pinjam";
-            Pinjam.UseVisualStyleBackColor = true;
-            Pinjam.Click += Pinjam_Click;
+            Refresh.Location = new Point(521, 373);
+            Refresh.Name = "Refresh";
+            Refresh.Size = new Size(94, 29);
+            Refresh.TabIndex = 1;
+            Refresh.Text = "Refresh";
+            Refresh.UseVisualStyleBackColor = true;
+            Refresh.Click += Refresh_Click;
             // 
             // label1
             // 
@@ -125,7 +125,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(Back);
             Controls.Add(label1);
-            Controls.Add(Pinjam);
+            Controls.Add(Refresh);
             Controls.Add(dataGridView1);
             Name = "PeminjamanBuku";
             Text = "Form2";
@@ -143,7 +143,7 @@
         private DataGridViewTextBoxColumn Penulis;
         private DataGridViewTextBoxColumn TahunTerbit;
         private DataGridViewTextBoxColumn Stok;
-        private Button Pinjam;
+        private Button Refresh;
         private Label label1;
         private Button Back;
     }

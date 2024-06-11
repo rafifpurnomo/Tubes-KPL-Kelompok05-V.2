@@ -161,6 +161,7 @@
             Pinjam.TabIndex = 12;
             Pinjam.Text = "Pinjam ";
             Pinjam.UseVisualStyleBackColor = true;
+            Pinjam.Click += Pinjam_Click;
             // 
             // DetailBuku
             // 
