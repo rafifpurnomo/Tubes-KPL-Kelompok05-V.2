@@ -60,7 +60,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
-
+            this.Dispose();
         }
     }
 }
