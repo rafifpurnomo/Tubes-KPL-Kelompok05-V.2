@@ -14,7 +14,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 {
     public partial class TambahAdmin : Form
     {
-        public string filePathDataAakun = "C:\\Users\\Rafif Purnomo\\OneDrive\\Documents\\Coding\\C#\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataAkun.json";
+        public string filePathDataAakun = "D:\\Coding\\C#\\KPL Clone\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataAkun.json";
         public TambahAdmin()
         {
             InitializeComponent();
