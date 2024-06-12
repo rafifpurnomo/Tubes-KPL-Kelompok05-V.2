@@ -14,7 +14,7 @@
     "Sinopsis": "The Hobbit adalah sebuah karya yang ditulis oleh J.R.R. Tolkien, yang pertama kali diterbitkan pada tahun 1937.",
     "Penulis": "J.R.R. Tolkien",
     "TahunTerbit": 1937,
-    "stok": 9,
+    "stok": 10,
     "jumlahBuku": 10
   },
   {
@@ -32,7 +32,7 @@
     "Sinopsis": "Cerita ini berkisar pada kehidupan Elizabeth Bennet, seorang wanita muda yang cerdas dan mandiri, serta interaksinya dengan Mr. Darcy, seorang pria kaya dan sombong.",
     "Penulis": "Jane Austen",
     "TahunTerbit": 1813,
-    "stok": 6,
+    "stok": 7,
     "jumlahBuku": 7
   },
   {
@@ -77,7 +77,7 @@
     "Sinopsis": "Novel fantasi ini menceritakan petualangan Bilbo Baggins, seorang hobbit yang enggan namun akhirnya terlibat dalam perjalanan berbahaya bersama sekelompok kurcaci untuk merebut kembali harta yang dijaga oleh naga Smaug.",
     "Penulis": "J.R.R. Tolkien",
     "TahunTerbit": 1937,
-    "stok": 11,
+    "stok": 10,
     "jumlahBuku": 13
   }
 ]

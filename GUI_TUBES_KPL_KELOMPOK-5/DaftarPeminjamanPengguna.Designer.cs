@@ -38,7 +38,6 @@
             Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
             back = new Button();
-            Refresh = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -126,21 +125,11 @@
             back.UseVisualStyleBackColor = true;
             back.Click += back_Click;
             // 
-            // Refresh
-            // 
-            Refresh.Location = new Point(665, 418);
-            Refresh.Name = "Refresh";
-            Refresh.Size = new Size(94, 29);
-            Refresh.TabIndex = 3;
-            Refresh.Text = "Refresh";
-            Refresh.UseVisualStyleBackColor = true;
-            // 
             // DaftarPeminjamanPengguna
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(960, 486);
-            Controls.Add(Refresh);
             Controls.Add(back);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
@@ -157,7 +146,6 @@
         private Label label1;
         private DataGridView dataGridView1;
         private Button back;
-        private Button Refresh;
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;

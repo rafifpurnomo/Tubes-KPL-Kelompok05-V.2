@@ -21,12 +21,13 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
             PopulateDataGridView();
         }
         MenuPengguna menuPengguna;
+        List<Peminjaman> daftarPeminjaman = Perpustakaan.ReadJsonFile<List<Peminjaman>>(Perpustakaan.JsonPathPeminjaman, "peminjaman");
 
-        private void PopulateDataGridView()
+        public void PopulateDataGridView()
         {
-            List<Peminjaman> daftarPinjaman = Perpustakaan.ReadJsonFile<List<Peminjaman>>(Perpustakaan.JsonPathPeminjaman, "peminjaman");
+            
 
-            foreach (var peminjaman in daftarPinjaman)
+            foreach (var peminjaman in daftarPeminjaman)
             {
                 if (peminjaman.Peminjam.namaUser == UserSession.namaUser && peminjaman.statusPengembalian)
                 {
@@ -47,7 +48,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            List<Peminjaman> daftarPeminjaman = Perpustakaan.ReadJsonFile<List<Peminjaman>>(Perpustakaan.JsonPathPeminjaman, "peminjaman");
+            
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
@@ -55,7 +56,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
                 Peminjaman peminjaman = searchPeminjamanById(idPeminjaman, daftarPeminjaman);
                 if (peminjaman != null)
                 {
-                    new PenggembalianBuku(peminjaman).ShowDialog();
+                    new DetailPeminjamanBuku(peminjaman).ShowDialog();
                 }
             };
         }
@@ -70,12 +71,6 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
                 }
             }
             return null;
-        }
-
-        private void Refresh_Click(object sender, EventArgs e)
-        {
-            dataGridView1.Rows.Clear();
-            PopulateDataGridView();
         }
 
         private void DaftarPeminjamanPengguna_Load(object sender, EventArgs e)
