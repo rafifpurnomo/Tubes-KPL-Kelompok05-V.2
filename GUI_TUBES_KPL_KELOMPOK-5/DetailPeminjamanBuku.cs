@@ -57,6 +57,20 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
             } 
             else
             {
+                new PembayaranDenda(denda).ShowDialog();
+                int idxPeminjamanBaru = searchPeminjamanById(peminjamanBuku.ID_Peminjaman, daftarPinjaman);
+                if (idxPeminjamanBaru >= 0)
+                {
+                    daftarPinjaman[idxPeminjamanBaru].keteranganPenggembalian = "Sedang Dikembalikan";
+                }
+                int idxBukuBaru = searchBukuByNama(peminjamanBuku.JudulBuku, daftarBuku);
+                if (idxBukuBaru >= 0)
+                {
+                    daftarBuku[idxBukuBaru].stok++;
+                }
+                WriteJSON(daftarPinjaman);
+                WriteJSON2(daftarBuku);
+                this.Close();
 
             }
         }
