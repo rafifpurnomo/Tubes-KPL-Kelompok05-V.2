@@ -40,17 +40,19 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 40.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ActiveCaption;
-            label1.Location = new Point(217, 9);
+            label1.Location = new Point(353, 14);
+            label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(331, 89);
+            label1.Size = new Size(532, 145);
             label1.TabIndex = 0;
             label1.Text = "PerpusGo";
             // 
             // pinjamBuku
             // 
-            pinjamBuku.Location = new Point(154, 197);
+            pinjamBuku.Location = new Point(250, 315);
+            pinjamBuku.Margin = new Padding(5);
             pinjamBuku.Name = "pinjamBuku";
-            pinjamBuku.Size = new Size(205, 85);
+            pinjamBuku.Size = new Size(333, 136);
             pinjamBuku.TabIndex = 1;
             pinjamBuku.Text = "Pinjam Buku";
             pinjamBuku.UseVisualStyleBackColor = true;
@@ -58,9 +60,10 @@
             // 
             // daftarPinjaman
             // 
-            daftarPinjaman.Location = new Point(415, 197);
+            daftarPinjaman.Location = new Point(674, 315);
+            daftarPinjaman.Margin = new Padding(5);
             daftarPinjaman.Name = "daftarPinjaman";
-            daftarPinjaman.Size = new Size(205, 85);
+            daftarPinjaman.Size = new Size(333, 136);
             daftarPinjaman.TabIndex = 3;
             daftarPinjaman.Text = "Daftar Pinjaman";
             daftarPinjaman.UseVisualStyleBackColor = true;
@@ -69,17 +72,19 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 9);
+            label2.Location = new Point(20, 14);
+            label2.Margin = new Padding(5, 0, 5, 0);
             label2.Name = "label2";
-            label2.Size = new Size(50, 20);
+            label2.Size = new Size(78, 32);
             label2.TabIndex = 4;
             label2.Text = "label2";
             // 
             // button1
             // 
-            button1.Location = new Point(288, 318);
+            button1.Location = new Point(468, 509);
+            button1.Margin = new Padding(5);
             button1.Name = "button1";
-            button1.Size = new Size(205, 85);
+            button1.Size = new Size(333, 136);
             button1.TabIndex = 5;
             button1.Text = "Log Out";
             button1.UseVisualStyleBackColor = true;
@@ -87,14 +92,15 @@
             // 
             // MenuPengguna
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1300, 720);
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(daftarPinjaman);
             Controls.Add(pinjamBuku);
             Controls.Add(label1);
+            Margin = new Padding(5);
             Name = "MenuPengguna";
             Text = "MenuPengguna";
             ResumeLayout(false);

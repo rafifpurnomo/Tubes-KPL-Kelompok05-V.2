@@ -14,7 +14,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 {
     public partial class TambahBuku : Form
     {
-        public string filePathDataBuku = "C:\\Users\\Rafif Purnomo\\OneDrive\\Documents\\Coding\\C#\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataBuku.json";
+        public string filePathDataBuku = "C:\\TubesKPL\\V2\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataBuku.json";
 
         public Buku newBuku;
 
@@ -108,6 +108,8 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
                 dataBuku.Add(newBuku);
                 WriteJSON(dataBuku);
                 MessageBox.Show("Buku baru berhasil di tambahkan");
+                DaftarBuku.Instance.RefreshDataGridView();
+                this.Close();
             }
         }
 

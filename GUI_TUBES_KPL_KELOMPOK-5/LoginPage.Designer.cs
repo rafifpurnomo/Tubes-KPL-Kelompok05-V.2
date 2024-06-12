@@ -39,21 +39,23 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ControlText;
-            label1.Location = new Point(243, 41);
+            label1.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ActiveCaption;
+            label1.Location = new Point(115, 62);
+            label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(249, 35);
+            label1.Size = new Size(1393, 170);
             label1.TabIndex = 0;
-            label1.Text = "APLIKASI PerpusGO";
+            label1.Text = "PerpusGO Application";
             label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(271, 155);
+            label2.Location = new Point(575, 350);
+            label2.Margin = new Padding(5, 0, 5, 0);
             label2.Name = "label2";
-            label2.Size = new Size(91, 20);
+            label2.Size = new Size(144, 32);
             label2.TabIndex = 1;
             label2.Text = "No Anggota";
             label2.Click += label2_Click;
@@ -61,50 +63,58 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(271, 228);
+            label3.Location = new Point(575, 500);
+            label3.Margin = new Padding(5, 0, 5, 0);
             label3.Name = "label3";
-            label3.Size = new Size(70, 20);
+            label3.Size = new Size(111, 32);
             label3.TabIndex = 2;
             label3.Text = "Password";
             // 
             // LoginBTN
             // 
-            LoginBTN.Location = new Point(366, 301);
+            LoginBTN.BackColor = SystemColors.ActiveCaption;
+            LoginBTN.ForeColor = SystemColors.ButtonHighlight;
+            LoginBTN.Location = new Point(750, 630);
+            LoginBTN.Margin = new Padding(5, 5, 5, 5);
             LoginBTN.Name = "LoginBTN";
-            LoginBTN.Size = new Size(94, 29);
+            LoginBTN.Size = new Size(153, 46);
             LoginBTN.TabIndex = 3;
             LoginBTN.Text = "Login";
-            LoginBTN.UseVisualStyleBackColor = true;
+            LoginBTN.UseVisualStyleBackColor = false;
             LoginBTN.Click += LoginBTN_Click;
             // 
             // usernameInput
             // 
-            usernameInput.Location = new Point(271, 178);
+            usernameInput.Location = new Point(575, 390);
+            usernameInput.Margin = new Padding(5, 5, 5, 5);
             usernameInput.Name = "usernameInput";
-            usernameInput.Size = new Size(189, 27);
+            usernameInput.Size = new Size(500, 39);
             usernameInput.TabIndex = 5;
             usernameInput.TextChanged += textBox2_TextChanged;
             // 
             // passInput
             // 
-            passInput.Location = new Point(271, 251);
+            passInput.Location = new Point(575, 540);
+            passInput.Margin = new Padding(5, 5, 5, 5);
             passInput.Name = "passInput";
-            passInput.Size = new Size(189, 27);
+            passInput.Size = new Size(500, 39);
             passInput.TabIndex = 6;
             // 
             // LoginPage
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1619, 1079);
             Controls.Add(passInput);
             Controls.Add(usernameInput);
             Controls.Add(LoginBTN);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(5, 5, 5, 5);
             Name = "LoginPage";
             Text = "loginPage";
+            Load += LoginPage_Load;
             ResumeLayout(false);
             PerformLayout();
         }
