@@ -25,5 +25,59 @@
     "TahunTerbit": 1960,
     "stok": 10,
     "jumlahBuku": 10
+  },
+  {
+    "kodeBuku": "BK004",
+    "Judul": "Pride and Prejudice",
+    "Sinopsis": "Cerita ini berkisar pada kehidupan Elizabeth Bennet, seorang wanita muda yang cerdas dan mandiri, serta interaksinya dengan Mr. Darcy, seorang pria kaya dan sombong.",
+    "Penulis": "Jane Austen",
+    "TahunTerbit": 1813,
+    "stok": 7,
+    "jumlahBuku": 7
+  },
+  {
+    "kodeBuku": "BK005",
+    "Judul": "1984",
+    "Sinopsis": "Sebuah novel distopia yang berlatar di masa depan di mana dunia dikuasai oleh rezim totaliter yang dipimpin oleh Big Brother.",
+    "Penulis": "George Orwell",
+    "TahunTerbit": 1949,
+    "stok": 5,
+    "jumlahBuku": 5
+  },
+  {
+    "kodeBuku": "BK006",
+    "Judul": "The Great Gatsby",
+    "Sinopsis": "Berlatar di era Jazz di Amerika, cerita ini mengikuti kehidupan Jay Gatsby, seorang pria kaya yang misterius, dan obsesinya terhadap Daisy Buchanan, cinta masa lalunya.",
+    "Penulis": "F. Scott Fitzgerald",
+    "TahunTerbit": 1925,
+    "stok": 14,
+    "jumlahBuku": 14
+  },
+  {
+    "kodeBuku": "BK007",
+    "Judul": "The Catcher in the Rye",
+    "Sinopsis": "Holden Caulfield, seorang remaja yang bermasalah, menceritakan pengalamannya selama beberapa hari di New York City setelah dikeluarkan dari sekolah asramanya.",
+    "Penulis": "J.D. Salinger",
+    "TahunTerbit": 1951,
+    "stok": 18,
+    "jumlahBuku": 18
+  },
+  {
+    "kodeBuku": "BK009",
+    "Judul": "Jane Eyre",
+    "Sinopsis": "Kisah hidup Jane Eyre, seorang yatim piatu yang tumbuh dalam kondisi sulit namun akhirnya menjadi wanita yang mandiri dan kuat.",
+    "Penulis": "Charlotte Bront\u00EB",
+    "TahunTerbit": 1847,
+    "stok": 16,
+    "jumlahBuku": 16
+  },
+  {
+    "kodeBuku": "BK008",
+    "Judul": "The Hobbit",
+    "Sinopsis": "Novel fantasi ini menceritakan petualangan Bilbo Baggins, seorang hobbit yang enggan namun akhirnya terlibat dalam perjalanan berbahaya bersama sekelompok kurcaci untuk merebut kembali harta yang dijaga oleh naga Smaug.",
+    "Penulis": "J.R.R. Tolkien",
+    "TahunTerbit": 1937,
+    "stok": 11,
+    "jumlahBuku": 13
   }
 ]

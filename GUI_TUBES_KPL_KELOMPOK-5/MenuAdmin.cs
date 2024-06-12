@@ -26,7 +26,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.SetVisibleCore(false);
+            
             new DaftarBuku().Show();
         }
 
