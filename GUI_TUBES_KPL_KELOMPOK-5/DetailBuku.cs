@@ -26,7 +26,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
         public void updateStockBuku()
         {
             int idxBuku = -1;
-            for (int i = 0; i < daftarBuku.Count; i++) 
+            for (int i = 0; i < daftarBuku.Count; i++)
             {
                 if (daftarBuku[i].kodeBuku == this.buku.kodeBuku)
                 {
@@ -34,7 +34,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
                     idxBuku = i;
                 }
 
-                if(idxBuku > -1)
+                if (idxBuku > -1)
                 {
                     WriteJSON2(daftarBuku);
                 }
@@ -46,7 +46,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
         {
             foreach (Akun akun in daftarAkun)
             {
-                if(akun.namaUser == UserSession.namaUser)
+                if (akun.namaUser == UserSession.namaUser)
                 {
                     return akun;
                 }
@@ -149,7 +149,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 
         private void Pinjam_Click(object sender, EventArgs e)
         {
-            if(buku.stok > 0)
+            if (buku.stok > 0)
             {
                 string tanggalPinjam = StringLibrary.KonversiDateKeString(DateTime.Now);
                 string tanggalPengembalian = StringLibrary.KonversiDateKeString(DateTime.Now.AddDays(7));
@@ -167,7 +167,12 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
                 MessageBox.Show("Stock buku tidak tersedia");
                 this.Dispose();
             }
-           
+
+        }
+
+        private void DetailBuku_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

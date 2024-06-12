@@ -19,9 +19,9 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
             buku = ReadJsonFile<List<Buku>>(JsonPathBuku, "buku"); 
         }
 
-        public const string JsonPathBuku = "C:\\Kuliah\\semester 4\\Konstruksi Perangkat Lunak\\Tubes\\Kelompok_5\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataBuku.json";
-        public const string JsonPathPeminjaman  = "C:\\Kuliah\\semester 4\\Konstruksi Perangkat Lunak\\Tubes\\Kelompok_5\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataPeminjaman.json";
-        public const string JsonPathAkun = "C:\\Kuliah\\semester 4\\Konstruksi Perangkat Lunak\\Tubes\\Kelompok_5\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataAkun.json";
+        public const string JsonPathBuku = "C:\\Kuliah\\semester 4\\Konstruksi Perangkat Lunak\\Tubes\\New folder\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataBuku.json";
+        public const string JsonPathPeminjaman  = "C:\\Kuliah\\semester 4\\Konstruksi Perangkat Lunak\\Tubes\\New folder\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataPeminjaman.json";
+        public const string JsonPathAkun = "C:\\Kuliah\\semester 4\\Konstruksi Perangkat Lunak\\Tubes\\New folder\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataAkun.json";
 
         private List<Buku> buku = new List<Buku>();
 

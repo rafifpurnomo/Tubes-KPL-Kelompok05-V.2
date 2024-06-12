@@ -17,6 +17,7 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
         public string TanggalPinjam { get; set; }
         public string DeadLinePengembalian { get; set; }
         public string TanggalPengembalian { get; set; }
+        public string keteranganPenggembalian { get; set; }
         public bool statusPengembalian { get; set; }
         private FineManager FineManager { get; set; }
 
@@ -29,6 +30,7 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
             DateTime dateTime =  StringLibrary.KonversiStringKeDate(TanggalPinjam).AddDays(7);
             this.DeadLinePengembalian = StringLibrary.KonversiDateKeString(dateTime);
             this.statusPengembalian = false;
+            this.keteranganPenggembalian = "Belum Dikembalikan";
             ID_count++;
         }
 
@@ -36,7 +38,9 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
         {
             if (statusPengembalian)
             {
-                return new FineManager(DeadLinePengembalian,TanggalPengembalian);
+                FineManager fineManagerBaru = new FineManager(DeadLinePengembalian, TanggalPengembalian);
+                this.FineManager = fineManagerBaru;
+                return fineManagerBaru;
             }
             else
             {
@@ -47,6 +51,7 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
         public void setStatusPengembalian()
         {
             statusPengembalian = true;
+            keteranganPenggembalian = "Sudah Dikembalikan";
             TanggalPengembalian = StringLibrary.KonversiDateKeString(DateTime.Now);
         }
     }
