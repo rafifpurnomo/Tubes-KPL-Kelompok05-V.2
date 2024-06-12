@@ -54,5 +54,13 @@
     "Role": "Anggota Perpustakaan",
     "no_Telpon": "0812",
     "status": 0
+  },
+  {
+    "namaUser": "nirin",
+    "No_Anggota": "009",
+    "password": "nirin12",
+    "Role": "Anggota Perpustakaan",
+    "no_Telpon": "0812",
+    "status": 0
   }
 ]

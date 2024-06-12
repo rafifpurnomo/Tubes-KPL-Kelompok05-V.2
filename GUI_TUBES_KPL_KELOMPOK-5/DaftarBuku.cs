@@ -17,7 +17,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
         public static DaftarBuku Instance;
         private List<Buku> daftarBuku = new List<Buku>();
         private string selectedKodeBuku;
-        public string filePathDataBuku = "C:\\TubesKPL\\V2\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataBuku.json";
+        public string filePathDataBuku = "D:\\Coding\\C#\\KPL Clone\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataBuku.json";
 
         public DaftarBuku()
         {
