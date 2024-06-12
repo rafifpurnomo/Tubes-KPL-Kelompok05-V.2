@@ -38,6 +38,11 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 
         private List<Buku> ReadJsonFile(string filePath)
         {
+            if (string.IsNullOrEmpty(filePath))
+            {
+                throw new ArgumentException("File path cannot be null or empty.", nameof(filePath));
+            }
+
             try
             {
                 string json;
@@ -47,7 +52,17 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
                 }
 
                 List<Buku> daftarBuku = JsonSerializer.Deserialize<List<Buku>>(json);
-                return daftarBuku;
+                return daftarBuku ?? new List<Buku>();
+            }
+            catch (FileNotFoundException ex)
+            {
+                MessageBox.Show($"File not found: {ex.Message}");
+                return new List<Buku>();
+            }
+            catch (JsonException ex)
+            {
+                MessageBox.Show($"Error parsing JSON file: {ex.Message}");
+                return new List<Buku>();
             }
             catch (Exception ex)
             {
