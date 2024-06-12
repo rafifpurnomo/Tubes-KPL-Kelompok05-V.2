@@ -20,22 +20,27 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ManajemenAkun manajemenAkun = new ManajemenAkun();  
+            ManajemenAkun manajemenAkun = new ManajemenAkun();
             manajemenAkun.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
             new DaftarBuku().Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             UserSession.clearSession();
-            LoginPage loginPage = new LoginPage();  
+            LoginPage loginPage = new LoginPage();
             loginPage.Visible = true;
             this.Dispose();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new ManajemenPeminjaman().Show();
         }
     }
 }

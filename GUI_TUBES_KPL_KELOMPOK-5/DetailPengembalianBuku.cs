@@ -12,18 +12,17 @@ using MAIN_TUBES_KPL_KELOMPOK_5;
 
 namespace GUI_TUBES_KPL_KELOMPOK_5
 {
-    public partial class DetailPeminjamanBuku : Form
+    public partial class DetailPengembalianBuku : Form
     {
-        public DetailPeminjamanBuku(Peminjaman peminjamanBuku)
+        public DetailPengembalianBuku(Peminjaman peminjamanBuku)
         {
             InitializeComponent();
             this.peminjamanBuku = peminjamanBuku;
-            setTextPenggembalianBuku();
         }
-
         Peminjaman peminjamanBuku;
         List<Peminjaman> daftarPinjaman = Perpustakaan.ReadJsonFile<List<Peminjaman>>(Perpustakaan.JsonPathPeminjaman, "peminjaman");
         List<Buku> daftarBuku = Perpustakaan.ReadJsonFile<List<Buku>>(Perpustakaan.JsonPathBuku, "buku");
+
         private void setTextPenggembalianBuku()
         {
 
@@ -35,63 +34,11 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
             label_statusPengembalian.Text = peminjamanBuku.keteranganPenggembalian;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FineManager denda = peminjamanBuku.GetFineManager();
-            if (denda.TotalDenda == 0)
-            {
-                int idxPeminjamanBaru = searchPeminjamanById(peminjamanBuku.ID_Peminjaman, daftarPinjaman);
-                if (idxPeminjamanBaru >= 0)
-                {
-                    daftarPinjaman[idxPeminjamanBaru].keteranganPenggembalian = "Sedang Dikembalikan";
-                }
-                int idxBukuBaru = searchBukuByNama(peminjamanBuku.JudulBuku, daftarBuku);
-                if (idxBukuBaru >= 0)
-                {
-                    daftarBuku[idxBukuBaru].stok++;
-                }
-                WriteJSON(daftarPinjaman);
-                WriteJSON2(daftarBuku);
-                MessageBox.Show("Request pengembalian buku berhasil");
-                this.Close();
-            }
-            else
-            {
-                new PembayaranDenda(denda).ShowDialog();
-                int idxPeminjamanBaru = searchPeminjamanById(peminjamanBuku.ID_Peminjaman, daftarPinjaman);
-                if (idxPeminjamanBaru >= 0)
-                {
-                    daftarPinjaman[idxPeminjamanBaru].keteranganPenggembalian = "Sedang Dikembalikan";
-                }
-                int idxBukuBaru = searchBukuByNama(peminjamanBuku.JudulBuku, daftarBuku);
-                if (idxBukuBaru >= 0)
-                {
-                    daftarBuku[idxBukuBaru].stok++;
-                }
-                WriteJSON(daftarPinjaman);
-                WriteJSON2(daftarBuku);
-                this.Close();
-
-            }
-        }
-
         private int searchPeminjamanById(string idPeminjaman, List<Peminjaman> peminjaman)
         {
             for (int i = 0; i < peminjaman.Count; i++)
             {
                 if (peminjaman[i].ID_Peminjaman == idPeminjaman)
-                {
-                    return i;
-                }
-            }
-            return -1;
-        }
-
-        private int searchBukuByNama(string namaBuku, List<Buku> daftarbuku)
-        {
-            for (int i = 0; i < daftarbuku.Count; i++)
-            {
-                if (daftarbuku[i].Judul == namaBuku)
                 {
                     return i;
                 }
@@ -143,9 +90,17 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
             }
         }
 
-        private void DetailPeminjamanBuku_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            int idxPeminjamanBaru = searchPeminjamanById(peminjamanBuku.ID_Peminjaman, daftarPinjaman);
+            if(idxPeminjamanBaru >= 0 )
+            {
+                daftarPinjaman[idxPeminjamanBaru].setStatusPengembalian();
+            }
 
+            WriteJSON(daftarPinjaman);
+            MessageBox.Show("Berhasil mengkonfirmasi pengembalian peminjaman buku");
+            this.Close();
         }
     }
 }

@@ -38,7 +38,7 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
         {
             if (!statusPengembalian)
             {
-                string tglPengembalian = StringLibrary.KonversiDateKeString(DateTime.Now.AddDays(30));
+                string tglPengembalian = StringLibrary.KonversiDateKeString(DateTime.Now);
                 FineManager fineManagerBaru = new FineManager(DeadLinePengembalian,tglPengembalian );
                 this.FineManager = fineManagerBaru;
                 return fineManagerBaru;

@@ -186,6 +186,18 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
         {
             try
             {
+                // Validasi flag
+                if (flag != "buku" && flag != "akun" && flag != "peminjaman")
+                {
+                    throw new ArgumentException("Invalid flag value.");
+                }
+
+                // Validasi path
+                if (!File.Exists(filePath))
+                {
+                    throw new FileNotFoundException("File not found.", filePath);
+                }
+
                 string json;
                 using (StreamReader reader = new StreamReader(filePath))
                 {

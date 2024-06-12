@@ -74,6 +74,7 @@
             button3.TabIndex = 3;
             button3.Text = "Manajemen Peminjaman";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
