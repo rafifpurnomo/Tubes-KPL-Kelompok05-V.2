@@ -194,6 +194,7 @@
             Controls.Add(label1);
             Name = "EditBuku";
             Text = "EditBuku";
+            Load += EditBuku_Load_1;
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
             PerformLayout();

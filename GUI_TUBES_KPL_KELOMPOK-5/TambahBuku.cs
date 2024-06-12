@@ -87,27 +87,45 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // Check if all fields are filled
+            if (string.IsNullOrWhiteSpace(textBox1.Text) ||
+                string.IsNullOrWhiteSpace(textBox2.Text) ||
+                string.IsNullOrWhiteSpace(textBox3.Text) ||
+                string.IsNullOrWhiteSpace(textBox4.Text) ||
+                string.IsNullOrWhiteSpace(textBox5.Text) ||
+                numericUpDown1.Value <= 0)
+            {
+                MessageBox.Show("Harap mengisi semua data buku.");
+                return;
+            }
+
             List<Buku> dataBuku = ReadJsonFile(filePathDataBuku);
 
             string kodeBuku = textBox1.Text;
             string judulBuku = textBox2.Text;
             string sinopsis = textBox3.Text;
             string penulis = textBox4.Text;
-            int tahunTerbit = int.Parse(textBox5.Text);
+            int tahunTerbit;
+            if (!int.TryParse(textBox5.Text, out tahunTerbit))
+            {
+                MessageBox.Show("Tahun terbit harus berupa angka.");
+                return;
+            }
+
             int jumlahBuku = (int)numericUpDown1.Value;
 
             Boolean statusBuku = statusBook(dataBuku, kodeBuku);
 
             if (statusBuku)
             {
-                MessageBox.Show("kode buku sudah ada");
+                MessageBox.Show("Kode buku sudah ada.");
             }
             else
             {
                 newBuku = new Buku(kodeBuku, judulBuku, sinopsis, penulis, tahunTerbit, jumlahBuku);
                 dataBuku.Add(newBuku);
                 WriteJSON(dataBuku);
-                MessageBox.Show("Buku baru berhasil di tambahkan");
+                MessageBox.Show("Buku baru berhasil ditambahkan.");
                 DaftarBuku.Instance.RefreshDataGridView();
                 this.Close();
             }
