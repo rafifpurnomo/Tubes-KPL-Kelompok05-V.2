@@ -30,14 +30,15 @@
         {
             label1 = new Label();
             dataGridView1 = new DataGridView();
-            back = new Button();
-            Refresh = new Button();
+            Column7 = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
+            back = new Button();
+            Refresh = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 40.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ActiveCaption;
-            label1.Location = new Point(331, 23);
+            label1.Location = new Point(315, 9);
             label1.Name = "label1";
             label1.Size = new Size(331, 89);
             label1.TabIndex = 0;
@@ -55,46 +56,36 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6 });
-            dataGridView1.Location = new Point(73, 161);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column7, Column1, Column2, Column3, Column4, Column5, Column6 });
+            dataGridView1.Location = new Point(42, 154);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(801, 188);
+            dataGridView1.Size = new Size(867, 188);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // back
+            // Column7
             // 
-            back.Location = new Point(780, 418);
-            back.Name = "back";
-            back.Size = new Size(94, 29);
-            back.TabIndex = 2;
-            back.Text = "Back";
-            back.UseVisualStyleBackColor = true;
-            back.Click += back_Click;
-            // 
-            // Refresh
-            // 
-            Refresh.Location = new Point(665, 418);
-            Refresh.Name = "Refresh";
-            Refresh.Size = new Size(94, 29);
-            Refresh.TabIndex = 3;
-            Refresh.Text = "Refresh";
-            Refresh.UseVisualStyleBackColor = true;
+            Column7.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            Column7.HeaderText = "ID";
+            Column7.MinimumWidth = 6;
+            Column7.Name = "Column7";
+            Column7.Width = 53;
             // 
             // Column1
             // 
+            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             Column1.HeaderText = "Nama Member";
             Column1.MinimumWidth = 6;
             Column1.Name = "Column1";
-            Column1.Width = 125;
+            Column1.Width = 127;
             // 
             // Column2
             // 
+            Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             Column2.HeaderText = "Judul Buku";
             Column2.MinimumWidth = 6;
             Column2.Name = "Column2";
-            Column2.Width = 125;
             // 
             // Column3
             // 
@@ -119,10 +110,30 @@
             // 
             // Column6
             // 
+            Column6.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             Column6.HeaderText = "Status Pengembalian";
             Column6.MinimumWidth = 6;
             Column6.Name = "Column6";
-            Column6.Width = 125;
+            Column6.Width = 161;
+            // 
+            // back
+            // 
+            back.Location = new Point(780, 418);
+            back.Name = "back";
+            back.Size = new Size(94, 29);
+            back.TabIndex = 2;
+            back.Text = "Back";
+            back.UseVisualStyleBackColor = true;
+            back.Click += back_Click;
+            // 
+            // Refresh
+            // 
+            Refresh.Location = new Point(665, 418);
+            Refresh.Name = "Refresh";
+            Refresh.Size = new Size(94, 29);
+            Refresh.TabIndex = 3;
+            Refresh.Text = "Refresh";
+            Refresh.UseVisualStyleBackColor = true;
             // 
             // DaftarPeminjamanPengguna
             // 
@@ -135,6 +146,7 @@
             Controls.Add(label1);
             Name = "DaftarPeminjamanPengguna";
             Text = "DaftarPeminjamanPengguna";
+            Load += DaftarPeminjamanPengguna_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -146,6 +158,7 @@
         private DataGridView dataGridView1;
         private Button back;
         private Button Refresh;
+        private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
