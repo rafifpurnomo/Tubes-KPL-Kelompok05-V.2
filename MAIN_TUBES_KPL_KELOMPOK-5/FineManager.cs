@@ -17,7 +17,7 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
 
         public FineManager(string DeadlinePengembalian, string TanggalPenggembalian)
         {
-            TotalDenda = Denda.PerhitunganDenda(DeadlinePengembalian, TanggalPenggembalian, ConfigManager.TarifDendaPerHari);
+            TotalDenda = Denda.PerhitunganDenda(DeadlinePengembalian, TanggalPenggembalian, 10000);
             StatusPelunasan = false;
         }
 

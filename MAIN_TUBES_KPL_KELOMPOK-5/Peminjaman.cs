@@ -36,9 +36,10 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
 
         public FineManager GetFineManager()
         {
-            if (statusPengembalian)
+            if (!statusPengembalian)
             {
-                FineManager fineManagerBaru = new FineManager(DeadLinePengembalian, TanggalPengembalian);
+                string tglPengembalian = StringLibrary.KonversiDateKeString(DateTime.Now);
+                FineManager fineManagerBaru = new FineManager(DeadLinePengembalian,tglPengembalian );
                 this.FineManager = fineManagerBaru;
                 return fineManagerBaru;
             }

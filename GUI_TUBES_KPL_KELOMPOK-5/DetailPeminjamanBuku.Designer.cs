@@ -1,6 +1,6 @@
 ﻿namespace GUI_TUBES_KPL_KELOMPOK_5
 {
-    partial class PenggembalianBuku
+    partial class DetailPeminjamanBuku
     {
         /// <summary>
         /// Required designer variable.
@@ -41,6 +41,8 @@
             label_buku = new Label();
             label_nama = new Label();
             label_id = new Label();
+            button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -161,11 +163,32 @@
             label_id.TabIndex = 7;
             label_id.Text = "label13";
             // 
-            // PenggembalianBuku
+            // button1
+            // 
+            button1.Location = new Point(184, 440);
+            button1.Name = "button1";
+            button1.Size = new Size(130, 41);
+            button1.TabIndex = 13;
+            button1.Text = "Pengembalian";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(365, 440);
+            button2.Name = "button2";
+            button2.Size = new Size(130, 41);
+            button2.TabIndex = 14;
+            button2.Text = "Perpanjang";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // DetailPeminjamanBuku
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(717, 519);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(label_statusPengembalian);
             Controls.Add(label_tenggatWaktu);
             Controls.Add(label_tglPeminjaman);
@@ -179,7 +202,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "PenggembalianBuku";
+            Name = "DetailPeminjamanBuku";
             Text = "PenggembalianBuku";
             ResumeLayout(false);
             PerformLayout();
@@ -200,5 +223,7 @@
         private Label label_buku;
         private Label label_nama;
         private Label label_id;
+        private Button button1;
+        private Button button2;
     }
 }

@@ -9,11 +9,28 @@
       "no_Telpon": "1302220011",
       "status": 0
     },
-    "JudulBuku": "Pride and Prejudice",
+    "JudulBuku": "Harry Potter and the Philosopher\u0027s Stone",
     "TanggalPinjam": "2024 06 12",
     "DeadLinePengembalian": "2024 06 19",
     "TanggalPengembalian": null,
-    "keteranganPenggembalian": "Belum Dikembalikan",
+    "keteranganPenggembalian": "Sedang Dikembalikan",
+    "statusPengembalian": false
+  },
+  {
+    "ID_Peminjaman": "3",
+    "Peminjam": {
+      "namaUser": "Ghaziveda Belvanaufal",
+      "No_Anggota": "002",
+      "password": "belva",
+      "Role": "Anggota Perpustakaan",
+      "no_Telpon": "1302220011",
+      "status": 0
+    },
+    "JudulBuku": "To Kill a Mockingbird",
+    "TanggalPinjam": "2024 06 12",
+    "DeadLinePengembalian": "2024 06 19",
+    "TanggalPengembalian": null,
+    "keteranganPenggembalian": "Sedang Dikembalikan",
     "statusPengembalian": false
   }
 ]
