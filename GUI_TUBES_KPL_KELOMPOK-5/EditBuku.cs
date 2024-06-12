@@ -35,7 +35,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
         {
             List<Buku> dataBuku = ReadJsonFile(filePathDataBuku);
 
-            //Mencegah agar Menginputkan KodeBuku yang sama ke data
+            // Mencegah agar Menginputkan KodeBuku yang sama ke data
             Boolean statusBuku = statusBook(dataBuku, textBox1.Text);
 
             if (statusBuku && textBox1.Text != bukuToEdit.kodeBuku)
@@ -44,30 +44,34 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
                 return;
             }
 
-            Buku buku = dataBuku.Find(b => b.kodeBuku == bukuToEdit.kodeBuku);
-
-            
-
-            if (buku != null)
+            // Konfirmasi sebelum menyimpan perubahan
+            var confirmResult = MessageBox.Show("Apakah Anda yakin ingin menyimpan perubahan?",
+                                                 "Konfirmasi Simpan Perubahan",
+                                                 MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
             {
-                // Update book details
-                buku.kodeBuku = textBox1.Text;
-                buku.Judul = textBox2.Text;
-                buku.Sinopsis = textBox3.Text;
-                buku.Penulis = textBox4.Text;
-                buku.TahunTerbit = int.Parse(textBox5.Text);
-                buku.stok = (int)numericUpDown1.Value;
+                Buku buku = dataBuku.Find(b => b.kodeBuku == bukuToEdit.kodeBuku);
 
+                if (buku != null)
+                {
+                    // Update book details
+                    buku.kodeBuku = textBox1.Text;
+                    buku.Judul = textBox2.Text;
+                    buku.Sinopsis = textBox3.Text;
+                    buku.Penulis = textBox4.Text;
+                    buku.TahunTerbit = int.Parse(textBox5.Text);
+                    buku.stok = (int)numericUpDown1.Value;
 
-                // Write the updated list to the file
-                WriteJSON(dataBuku);
+                    // Write the updated list to the file
+                    WriteJSON(dataBuku);
 
-                MessageBox.Show("Book details updated successfully.");
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Book not found.");
+                    MessageBox.Show("Detail buku berhasil diperbarui.");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Buku tidak ditemukan.");
+                }
             }
         }
 
@@ -111,6 +115,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
         {
 
         }
+
         public Boolean statusBook(List<Buku> DATABUKU, string kodeBuku)
         {
             for (int i = 0; i < DATABUKU.Count; i++)
@@ -123,5 +128,9 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
             return false;
         }
 
+        private void EditBuku_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
