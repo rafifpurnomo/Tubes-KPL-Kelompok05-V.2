@@ -46,5 +46,13 @@
     "Role": "Admin",
     "no_Telpon": "1302223039",
     "status": 0
+  },
+  {
+    "namaUser": "test",
+    "No_Anggota": "008",
+    "password": "test12",
+    "Role": "Anggota Perpustakaan",
+    "no_Telpon": "0812",
+    "status": 0
   }
 ]

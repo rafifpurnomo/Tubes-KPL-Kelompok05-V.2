@@ -1,6 +1,6 @@
 ﻿namespace GUI_TUBES_KPL_KELOMPOK_5
 {
-    partial class tambahAnggotaPerpus
+    partial class TambahAnggotaPerpus
     {
         /// <summary>
         /// Required designer variable.
@@ -28,169 +28,168 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button2 = new Button();
-            textBox5 = new TextBox();
-            label5 = new Label();
-            textBox4 = new TextBox();
-            label4 = new Label();
-            textBox3 = new TextBox();
-            label3 = new Label();
-            textBox2 = new TextBox();
-            label2 = new Label();
-            textBox1 = new TextBox();
-            label1 = new Label();
             button1 = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            label4 = new Label();
+            label6 = new Label();
+            tbNoAnggota = new TextBox();
+            tbNama = new TextBox();
+            tbNoTelpon = new TextBox();
+            buttonSimpan = new Button();
+            label3 = new Label();
+            label7 = new Label();
+            tbPassword = new TextBox();
+            tbConfirmPass = new TextBox();
             SuspendLayout();
-            // 
-            // button2
-            // 
-            button2.Location = new Point(809, 197);
-            button2.Margin = new Padding(5, 5, 5, 5);
-            button2.Name = "button2";
-            button2.Size = new Size(226, 107);
-            button2.TabIndex = 24;
-            button2.Text = "submit";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(49, 483);
-            textBox5.Margin = new Padding(5, 5, 5, 5);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(282, 39);
-            textBox5.TabIndex = 23;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(49, 446);
-            label5.Margin = new Padding(5, 0, 5, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(263, 32);
-            label5.TabIndex = 22;
-            label5.Text = "masukan nomor telpon";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(384, 344);
-            textBox4.Margin = new Padding(5, 5, 5, 5);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(282, 39);
-            textBox4.TabIndex = 21;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(384, 307);
-            label4.Margin = new Padding(5, 0, 5, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(231, 32);
-            label4.TabIndex = 20;
-            label4.Text = "konfirmasi password";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(49, 344);
-            textBox3.Margin = new Padding(5, 5, 5, 5);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(282, 39);
-            textBox3.TabIndex = 19;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(49, 307);
-            label3.Margin = new Padding(5, 0, 5, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(215, 32);
-            label3.TabIndex = 18;
-            label3.Text = "masukan password";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(384, 197);
-            textBox2.Margin = new Padding(5, 5, 5, 5);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(282, 39);
-            textBox2.TabIndex = 17;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(384, 160);
-            label2.Margin = new Padding(5, 0, 5, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(270, 32);
-            label2.TabIndex = 16;
-            label2.Text = "masukan nama anggota";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(49, 197);
-            textBox1.Margin = new Padding(5, 5, 5, 5);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(282, 39);
-            textBox1.TabIndex = 15;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(49, 160);
-            label1.Margin = new Padding(5, 0, 5, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(282, 32);
-            label1.TabIndex = 14;
-            label1.Text = "masukan nomor anggota";
             // 
             // button1
             // 
-            button1.Location = new Point(23, 37);
-            button1.Margin = new Padding(5, 5, 5, 5);
+            button1.Location = new Point(12, 12);
             button1.Name = "button1";
-            button1.Size = new Size(153, 46);
-            button1.TabIndex = 13;
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 1;
             button1.Text = "kembali";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // tambahAnggotaPerpus
+            // label1
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            label1.AutoSize = true;
+            label1.Location = new Point(77, 131);
+            label1.Name = "label1";
+            label1.Size = new Size(91, 20);
+            label1.TabIndex = 2;
+            label1.Text = "No Anggota";
+            label1.Click += label1_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(77, 178);
+            label2.Name = "label2";
+            label2.Size = new Size(49, 20);
+            label2.TabIndex = 3;
+            label2.Text = "Nama";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(77, 315);
+            label4.Name = "label4";
+            label4.Size = new Size(78, 20);
+            label4.TabIndex = 5;
+            label4.Text = "No Telpon";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(352, 82);
+            label6.Name = "label6";
+            label6.Size = new Size(0, 20);
+            label6.TabIndex = 7;
+            // 
+            // tbNoAnggota
+            // 
+            tbNoAnggota.Location = new Point(255, 124);
+            tbNoAnggota.Name = "tbNoAnggota";
+            tbNoAnggota.Size = new Size(318, 27);
+            tbNoAnggota.TabIndex = 8;
+            // 
+            // tbNama
+            // 
+            tbNama.Location = new Point(255, 171);
+            tbNama.Name = "tbNama";
+            tbNama.Size = new Size(318, 27);
+            tbNama.TabIndex = 10;
+            // 
+            // tbNoTelpon
+            // 
+            tbNoTelpon.Location = new Point(255, 308);
+            tbNoTelpon.Name = "tbNoTelpon";
+            tbNoTelpon.Size = new Size(318, 27);
+            tbNoTelpon.TabIndex = 11;
+            // 
+            // buttonSimpan
+            // 
+            buttonSimpan.Location = new Point(615, 388);
+            buttonSimpan.Name = "buttonSimpan";
+            buttonSimpan.Size = new Size(94, 29);
+            buttonSimpan.TabIndex = 13;
+            buttonSimpan.Text = "Simpan";
+            buttonSimpan.UseVisualStyleBackColor = true;
+            buttonSimpan.Click += button2_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(77, 225);
+            label3.Name = "label3";
+            label3.Size = new Size(70, 20);
+            label3.TabIndex = 14;
+            label3.Text = "Password";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(77, 270);
+            label7.Name = "label7";
+            label7.Size = new Size(145, 20);
+            label7.TabIndex = 15;
+            label7.Text = "Konfirmasi Password";
+            // 
+            // tbPassword
+            // 
+            tbPassword.Location = new Point(255, 218);
+            tbPassword.Name = "tbPassword";
+            tbPassword.Size = new Size(318, 27);
+            tbPassword.TabIndex = 16;
+            // 
+            // tbConfirmPass
+            // 
+            tbConfirmPass.Location = new Point(255, 263);
+            tbConfirmPass.Name = "tbConfirmPass";
+            tbConfirmPass.Size = new Size(318, 27);
+            tbConfirmPass.TabIndex = 17;
+            // 
+            // TambahAnggotaPerpus
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1619, 1079);
-            Controls.Add(button2);
-            Controls.Add(textBox5);
-            Controls.Add(label5);
-            Controls.Add(textBox4);
-            Controls.Add(label4);
-            Controls.Add(textBox3);
+            ClientSize = new Size(800, 450);
+            Controls.Add(tbConfirmPass);
+            Controls.Add(tbPassword);
+            Controls.Add(label7);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(buttonSimpan);
+            Controls.Add(tbNoTelpon);
+            Controls.Add(tbNama);
+            Controls.Add(tbNoAnggota);
+            Controls.Add(label6);
+            Controls.Add(label4);
             Controls.Add(label2);
-            Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(button1);
-            Margin = new Padding(5, 5, 5, 5);
-            Name = "tambahAnggotaPerpus";
-            Text = "tambahMenuAdmin";
+            Name = "TambahAnggotaPerpus";
+            Text = "TambahAnggotaPerpus";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button2;
-        private TextBox textBox5;
-        private Label label5;
-        private TextBox textBox4;
-        private Label label4;
-        private TextBox textBox3;
-        private Label label3;
-        private TextBox textBox2;
-        private Label label2;
-        private TextBox textBox1;
-        private Label label1;
         private Button button1;
+        private Label label1;
+        private Label label2;
+        private Label label4;
+        private Label label6;
+        private TextBox tbNoAnggota;
+        private TextBox tbNama;
+        private TextBox tbNoTelpon;
+        private Button buttonSimpan;
+        private Label label3;
+        private Label label7;
+        private TextBox tbPassword;
+        private TextBox tbConfirmPass;
     }
 }

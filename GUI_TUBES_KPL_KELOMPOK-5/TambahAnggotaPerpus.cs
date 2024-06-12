@@ -12,12 +12,10 @@ using System.Windows.Forms;
 
 namespace GUI_TUBES_KPL_KELOMPOK_5
 {
-
-    public partial class tambahAnggotaPerpus : Form
+    public partial class TambahAnggotaPerpus : Form
     {
-        public string filePathDataAakun = "C:\\Users\\Rafif Purnomo\\OneDrive\\Documents\\Coding\\C#\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataAkun.json";
-
-        public tambahAnggotaPerpus()
+        public string filePathDataAakun = "D:\\Coding\\C#\\KPL Clone\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataAkun.json";
+        public TambahAnggotaPerpus()
         {
             InitializeComponent();
         }
@@ -53,82 +51,94 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
             File.WriteAllText(filePathDataAakun, jsonString);
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            List<Akun> dataAkun = ReadJson(filePathDataAakun);
-
-            string noAnggota = textBox1.Text;
-            string namaAnggota = textBox2.Text;
-            string password = textBox3.Text;
-            string confirmPass = textBox4.Text;
-            string noTelp = textBox5.Text;
-            string role = "Anggota Perpustakaan";
-
-            Boolean statusNoAnggota = validateNoAnggota(dataAkun, noAnggota);
-
-            if (statusNoAnggota)
-            {
-                MessageBox.Show("Anggota sudah terdaftar");
-            }
-            else
-            {
-                Boolean passLength = validateLengthPass(password);
-
-                if (passLength)
-                {
-                    Boolean confirmpass = validatePassword(password, confirmPass);
-
-                    if (confirmpass)
-                    {
-                        Akun newAkun = new Akun(namaAnggota, noAnggota, password, role, noTelp);
-                        dataAkun.Add(newAkun);
-                        WriteJSON(dataAkun);
-                        MessageBox.Show("Admin baru berhasil di tambahkan");
-                    }
-                    else
-                    {
-                        MessageBox.Show("konfirmasi password salah");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("minimal password 6 huruf dan maksimal 20 huruf");
-                }
-            }
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
-        public Boolean validateNoAnggota(List<Akun> dataAkun, string noAnggota)
+        private void label1_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataAkun.Count; i++)
-            {
-                if (noAnggota.Equals(dataAkun[i].No_Anggota))
-                {
-                    return true;
-                }
-            }
-            return false;
+
         }
 
-        public Boolean validatePassword(string password, string confirmPass)
+        private void label3_Click(object sender, EventArgs e)
         {
-            if (confirmPass.Equals(password))
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            List<Akun> dataAkun = ReadJson(filePathDataAakun);
+
+            string noAnggota = tbNoAnggota.Text;
+            string nama = tbNama.Text;
+            string password = tbPassword.Text;
+            string confirmPass = tbConfirmPass.Text;
+            string role = "Anggota Perpustakaan";
+            string noTelpon = tbNoTelpon.Text;
+            //int status = 0;
+
+            // Memvalidasi input
+            bool isValid = true;
+            string errorMessage = "";
+
+            // Validasi TextBox tidak boleh kosong
+            if (string.IsNullOrWhiteSpace(noAnggota) || string.IsNullOrWhiteSpace(nama) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(confirmPass) || string.IsNullOrWhiteSpace(noTelpon))
             {
-                return true;
+                isValid = false;
+                errorMessage += "Semua field harus diisi.\n";
+            }
+
+            // Validasi no anggota tidak boleh sama
+            if (dataAkun.Any(a => a.No_Anggota == noAnggota))
+            {
+                isValid = false;
+                errorMessage += "No Anggota sudah ada.\n";
+            }
+
+            // Validasi panjang password
+            if (password.Length < 6 || password.Length > 20)
+            {
+                isValid = false;
+                errorMessage += "Password harus terdiri dari 6-20 karakter.\n";
+            }
+
+            // Validasi password dan confirm password harus sama
+            if (password != confirmPass)
+            {
+                isValid = false;
+                errorMessage += "Password dan Confirm Password tidak sama.\n";
+            }
+
+            if (isValid)
+            {
+                // Membuat objek Akun baru
+                Akun akun = new Akun(nama, noAnggota, password, role, noTelpon)
+                {
+                    namaUser = nama,
+                    password = password,
+                    No_Anggota = noAnggota,
+                    Role = role,
+                    no_Telpon = noTelpon,
+                };
+
+                // Menambahkan objek Akun baru ke daftar dataAkun
+                dataAkun.Add(akun);
+                // Menulis kembali daftar dataAkun ke file JSON
+                WriteJSON(dataAkun);
+                // Membersihkan TextBox setelah berhasil menyimpan
+                tbNoAnggota.Clear();
+                tbNama.Clear();
+                tbPassword.Clear();
+                tbConfirmPass.Clear();
+                tbNoTelpon.Clear();
+
+                MessageBox.Show("Data anggota baru berhasil disimpan.");
             }
             else
             {
-                return false;
+                MessageBox.Show(errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        public Boolean validateLengthPass(string password)
-        {
-            return password.Length >= 6 && password.Length <= 20;
         }
     }
 }

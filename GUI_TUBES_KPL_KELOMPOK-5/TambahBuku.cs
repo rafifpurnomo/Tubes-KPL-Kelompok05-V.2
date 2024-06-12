@@ -14,7 +14,7 @@ namespace GUI_TUBES_KPL_KELOMPOK_5
 {
     public partial class TambahBuku : Form
     {
-        public string filePathDataBuku = "C:\\TubesKPL\\V2\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataBuku.json";
+        public string filePathDataBuku = "D:\\Coding\\C#\\KPL Clone\\Tubes-KPL-Kelompok05-V.2\\GUI_TUBES_KPL_KELOMPOK-5\\Data\\DataBuku.json";
 
         public Buku newBuku;
 
