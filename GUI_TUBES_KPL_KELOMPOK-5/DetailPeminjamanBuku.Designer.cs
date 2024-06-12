@@ -204,6 +204,7 @@
             Controls.Add(label1);
             Name = "DetailPeminjamanBuku";
             Text = "PenggembalianBuku";
+            Load += DetailPeminjamanBuku_Load;
             ResumeLayout(false);
             PerformLayout();
         }
